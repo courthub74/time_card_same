@@ -1,0 +1,102 @@
+/* CSS Variables */
+
+/* The ROOT (for Day Mode) */
+:root {
+    --base-color: white;
+    --text-color: black;
+    --button-color: #181717;
+    --button-words: white;
+    --primary-color: #3a435d;
+    --theme-switch-backgrd: #9fa4b3;
+    --button-two: #131212;
+}
+
+/* Darkmode (for Nite Mode) */
+.darkmode {
+    --base-color: #1E1E1E;
+    --text-color: white;
+    --button-color: #181717;
+    /* --button-color: #393636; */
+    --button-words: white;
+    --primary-color: #3a435d; 
+    --theme-switch-backgrd: #15171d;
+    --button-two: #131212;
+    /* --button-two: #393636; */
+}
+
+/* ********** */
+/* ********** */
+/* Whole Page */
+/* ********** */
+/* ********** */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+
+    /* Nav */
+    #main_nav {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    #theme_switch {
+        margin: 0 2em 0 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--theme-switch-backgrd);
+        /* Sets the Theme Switch button to top right corner */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    /* NOW set the order of the SVG */
+    #theme_switch svg {
+        fill: var(--primary-color);
+    }
+
+    /* Hide the SVG last child(day mode) */
+    #theme_switch svg:last-child {
+        display: none;
+    }
+
+    /* Invert this for (nite mode) */
+    .darkmode #theme_switch svg:first-child {
+        display: none;
+    }
+
+    /* Make Last child visible in (nitemode) */
+    .darkmode #theme_switch svg:last-child {
+        display: block;
+    }
+
+    /* Main Page */
+    .container {
+        font-family: Poppins;
+        display: flex;
+        flex-direction: column;
+    }
+}
