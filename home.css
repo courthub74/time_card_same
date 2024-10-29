@@ -247,6 +247,7 @@ body {
     .submit {
         width: 100%;
         background-color: var(--button-two);
+        background-color: var(--pin-num-match-needed);
         color: var(--button-words);
         border: none;
         padding: 1em;
@@ -254,6 +255,8 @@ body {
         cursor: pointer;
         font-size: .9rem;
     }
+
+    /* Submit filled */
 
     /* Create an Account */
     .create_acct {
@@ -444,7 +447,7 @@ body {
         width: 100%;
         position: relative;
         height: 2.3em;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     /* Remove focus on Input */
@@ -462,6 +465,7 @@ body {
         font-weight: bold;
         cursor: pointer;
         font-size: .9rem;
+        border-radius: 5px;
     }
 
     /* Create an Account */

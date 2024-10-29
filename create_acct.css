@@ -209,8 +209,13 @@ body {
         outline: none;
     }
 
-    /* Pins Match */
+    /* PINS */
     .pin_match_confirm {
+        display: none;
+    }
+
+    /* Pins Match */
+    .pin_match_confirm.entered {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -241,6 +246,7 @@ body {
         cursor: pointer;
         font-size: .9rem;
         width: 100%;
+        border-radius: 5px;
     }
 
     .submit.match {
@@ -252,5 +258,6 @@ body {
         cursor: pointer;
         font-size: .9rem;
         width: 100%;
+        border-radius: 5px;
     }
 }
