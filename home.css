@@ -12,6 +12,7 @@
     --primary-color: #3a435d;
     --theme-switch-backgrd: #9fa4b3;
     --button-two: #131212;
+    --pin-num-match-needed: #393636;
 }
 
 /* Darkmode (for Nite Mode) */
@@ -24,7 +25,7 @@
     --primary-color: #3a435d; 
     --theme-switch-backgrd: #15171d;
     --button-two: #131212;
-    /* --button-two: #393636; */
+    --pin-num-match-needed: #393636;
 }
 
 /* ********** */

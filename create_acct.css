@@ -9,6 +9,9 @@
     --primary-color: #3a435d;
     --theme-switch-backgrd: #9fa4b3;
     --button-two: #131212;
+    --pin-num-match-needed: #605b5b;
+    --pins-match: #0AA51C;
+    --pins-no-match: #DE391C;
 }
 
 /* Darkmode (for Nite Mode) */
@@ -21,7 +24,9 @@
     --primary-color: #3a435d; 
     --theme-switch-backgrd: #15171d;
     --button-two: #131212;
-    /* --button-two: #393636; */
+    --pin-num-match-needed: #605b5b;
+    --pins-match: #0AA51C;
+    --pins-no-match: #DE391C;
 }
 
 /* ********** */
@@ -135,7 +140,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3em;
+        gap: 2em;
         width: 30%;
         margin-top: 3em;
         /* background-color: blue; */
@@ -155,14 +160,15 @@ body {
 
     /* Name Inputs */
     .name_in {
+        position: relative;
+        display: inline-block;
         border: 1px solid var(--text-color);
         background-color: var(--base-color);
         color: var(--text-color);
-        padding: 1em .5em;
-        width: 100%;
+        padding: 1em;
+        /* width: 100%; */
         font-size: 16px;
         cursor: pointer;
-        display: flex;
     }
 
     /* Pin # */
@@ -201,5 +207,50 @@ body {
     /* Remove focus on Input */
     input:focus {
         outline: none;
+    }
+
+    /* Pins Match */
+    .pin_match_confirm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Match */
+    .match_ {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* No Match */
+    .no_match {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submit {
+        background-color: var(--pin-num-match-needed);
+        color: var(--base-color);
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
+        width: 100%;
+    }
+
+    .submit.match {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
+        width: 100%;
     }
 }
