@@ -6,15 +6,14 @@
     <title>Time Card</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./create_acct.css">
 </head>
 <body>
 
-     <!-- FONTS -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Page Content -->
     <div class="container">
@@ -36,34 +35,28 @@
             <p class="header">Time Card</p>
 
              <!-- App State -->
-             <p class="state">Login</p>
+             <p class="state">Create Account</p>
 
          </div>
 
-         <!-- Form -->
-         <form action="#">
 
-            <!-- Name -->
+         <!-- Form -->
+          <form action="#">
+
+            <!-- First Name Enter -->
+            <div class="input_div">
+                <label for="firstname">Enter Firstname:</label>
+                <input class="name_in" type="text" id="firstname">
+            </div>
+
+            <!-- Last Name Enter -->
              <div class="input_div">
-                <label for="name">Name:</label>
-                <!-- Input Below -->
-                 <!-- Name will be read from DB -->
-                <div class="dropdown">
-                    <select id="dropdown_btn" class=".dropdown_btn">
-                        <div class="name_list" id="name_list">
-                            <option value="#">Select your Name:</option>
-                            <option value="#">Lastname, Firstname</option>
-                            <option value="#">Lastname, Firstname</option>
-                            <option value="#">Lastname, Firstname</option>
-                            <option value="#">Lastname, Firstname</option>
-                            <option value="#">Lastname, Firstname</option>
-                        </div>
-                    </select>
-                </div>
+                <label for="lastname">Enter Lastname:</label>
+                <input class="name_in" type="text" id="lastname">
              </div>
 
              <!-- Pin # -->
-              <div class="input_div">
+             <div class="input_div">
                 <label for="pin_num">Pin #:</label>
                     <div class="pin_field">
                         <input type="text" class="pin_put" maxlength="4">
@@ -73,21 +66,13 @@
                     </div>
               </div>
 
-               <!-- Submit Button -->
-               <button class="submit">Submit</button>
-
-               <!-- Create Account -->
-               <a href="./create_acct.html" class="create_acct">Create an Account</a>
-               
-         </form>
+          </form>
 
     </div>
     
 </body>
 
 <!-- DARKMODE -->
- <script src="./darkmode.js"></script>
-<!-- DROPDOWN -->
- <script src="./names_drop.js"></script>
+<script src="./darkmode.js"></script>
 
 </html>

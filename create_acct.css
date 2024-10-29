@@ -98,5 +98,108 @@ body {
         font-family: Poppins;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header Div */
+    .header_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header */
+    .header {
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* App State */
+    .state {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        display: flex;
+        justify-content: center;
+        padding: .5em 3em;
+        font-size: 1.2rem;
+        /* To fit the two words in  */
+        width: 60%;
+    }
+
+    /* Form */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+        width: 30%;
+        margin-top: 3em;
+        /* background-color: blue; */
+    }
+
+    /* The Labels */
+    label {
+        font-size: 1.2rem;
+    }
+
+    /* Input Divs */
+    .input_div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Name Inputs */
+    .name_in {
+        border: 1px solid var(--text-color);
+        background-color: var(--base-color);
+        color: var(--text-color);
+        padding: 1em .5em;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+    }
+
+    /* Pin # */
+    .name_and_pin {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* All 4 Pin fields */
+    .pin_field {
+        /* display: grid;
+        grid-template-columns: repeat(4, 1fr); 4 columns, equal width */
+        display: flex;
+        gap: 1vw;
+        /* gap: 2.5vw; */
+        width: 100%;
+    }
+
+    /* Each Pin field */
+    .pin_put {
+        background-color: var(--base-color);
+        /* background-color: blue; */
+        border: var(--text-color) 1px solid;
+        padding: 1em 2em;
+        /* padding-bottom: 100%; */
+        position: relative;
+        width: 20px;
+        /* New Percentage width */
+        width: 10%;
+        color: var(--text-color);
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Remove focus on Input */
+    input:focus {
+        outline: none;
     }
 }
