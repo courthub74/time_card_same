@@ -350,8 +350,8 @@ body {
         display: flex;
         justify-content: center;
         padding: .5em 3em;
-        font-size: 1.2rem;
-        /* width: 50%; */
+        font-size: 1rem;
+        width: 50%;
     }
 
      /* Form */
@@ -433,9 +433,7 @@ body {
     .pin_field {
         display: flex;
         gap: 1vw;
-        /* gap: 2.5vw; */
         width: 100%;
-        /* width: 40%; */
     }
 
     /* Each Pin field */
