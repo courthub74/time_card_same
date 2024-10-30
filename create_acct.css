@@ -211,11 +211,13 @@ body {
 
     /* PINS */
     .pin_match_confirm {
-        display: none;
+        /* display: none; */
+        opacity: 0;
     }
 
     /* Pins Match */
     .pin_match_confirm.entered {
+        opacity: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
