@@ -447,7 +447,7 @@ body {
         width: 100%;
         position: relative;
         height: 2.3em;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     /* Remove focus on Input */
@@ -458,8 +458,8 @@ body {
     /* Submit Button */
     .submit {
         width: 100%;
-        background-color: var(--button-two);
-        color: var(--button-words);
+        background-color: var(--pin-num-match-needed);
+        color: white;
         border: none;
         padding: 1em;
         font-weight: bold;

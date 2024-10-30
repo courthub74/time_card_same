@@ -9,7 +9,7 @@
     --primary-color: #3a435d;
     --theme-switch-backgrd: #9fa4b3;
     --button-two: #131212;
-    --pin-num-match-needed: #605b5b;
+    --pin-num-match-needed: #393636;
     --pins-match: #0AA51C;
     --pins-no-match: #DE391C;
 }
@@ -24,7 +24,7 @@
     --primary-color: #3a435d; 
     --theme-switch-backgrd: #15171d;
     --button-two: #131212;
-    --pin-num-match-needed: #605b5b;
+    --pin-num-match-needed: #393636;
     --pins-match: #0AA51C;
     --pins-no-match: #DE391C;
 }
@@ -239,7 +239,7 @@ body {
 
     .submit {
         background-color: var(--pin-num-match-needed);
-        color: var(--base-color);
+        color: white;
         border: none;
         padding: 1em;
         font-weight: bold;
@@ -259,5 +259,17 @@ body {
         font-size: .9rem;
         width: 100%;
         border-radius: 5px;
+    }
+
+    /* Create an Account */
+    .create_acct {
+        text-align: center;
+        color: var(--text-color);
+        font-weight: bold;
+    }
+    
+    a {
+        color: var(--button-words);
+        text-decoration: none;
     }
 }
