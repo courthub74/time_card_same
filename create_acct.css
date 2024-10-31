@@ -230,6 +230,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: var(--pins-match);
     }
 
     /* No Match */
@@ -237,8 +238,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: var(--pins-no-match);
     }
 
+    /* Submit */
     .submit {
         background-color: var(--pin-num-match-needed);
         color: white;
@@ -260,6 +263,198 @@ body {
         cursor: pointer;
         font-size: .9rem;
         width: 100%;
+        border-radius: 5px;
+    }
+
+    /* Create an Account */
+    .create_acct {
+        text-align: center;
+        color: var(--text-color);
+        font-weight: bold;
+    }
+    
+    a {
+        color: var(--button-words);
+        text-decoration: none;
+    }
+}
+
+/* MOBILE (Portrait) */
+@media screen and (max-width: 800px) {
+    /* Nav */
+    #main_nav {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    #theme_switch {
+        margin: 0 2em 0 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--theme-switch-backgrd);
+        /* Sets the Theme Switch button to top right corner */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    /* NOW set the order of the SVG */
+    #theme_switch svg {
+        fill: var(--primary-color);
+    }
+
+    /* Hide the SVG last child(day mode) */
+    #theme_switch svg:last-child {
+        display: none;
+    }
+
+    /* Invert this for (nite mode) */
+    .darkmode #theme_switch svg:first-child {
+        display: none;
+    }
+
+    /* Make Last child visible in (nitemode) */
+    .darkmode #theme_switch svg:last-child {
+        display: block;
+    }
+
+    /* Main Page */
+    .container {
+        font-family: Poppins;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        /* border: 1px solid white; */
+    }
+
+    /* Header Div */
+    .header_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header */
+    .header {
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* App State */
+    .state {
+        /* background-color: var(--text-color); */
+        background-color: var(--button-two);
+        /* Make text match the base */
+        color: var(--button-words);
+        display: flex;
+        justify-content: center;
+        padding: .5em 2em;
+        font-size: 1rem;
+        width: 70%;
+    }
+
+    /* Form */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        width: 100%;
+        margin-top: 3em;
+        /* background-color: blue; */ 
+    }
+
+    /* The Labels */
+    label {
+        font-size: 1rem;
+    }
+
+    /* Input Divs */
+    .input_div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Name Inputs */
+    .name_in {
+        position: relative;
+        display: inline-block;
+        /* Border and Padding HERE */
+        border: 1px solid var(--text-color);
+        background-color: var(--base-color);
+        padding: .7em;
+        /* padding: 0 1em 0 0; */
+        /* width: 100%; */
+    }
+
+    /* Pin # */
+    .name_and_pin {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* All 4 Pin fields */
+    .pin_field {
+        display: flex;
+        gap: 1vw;
+        width: 100%;
+    }
+
+    /* Each Pin field */
+    .pin_put {
+        background-color: var(--base-color);
+        border: var(--text-color) 1px solid;
+        width: 100%;
+        position: relative;
+        height: 2.4em;
+        font-size: 1rem;
+    }
+
+    /* Remove focus on Input */
+    input:focus {
+        outline: none;
+    }
+
+    /* PINS */
+    .pin_match_confirm {
+        opacity: 0;
+    }
+
+    /* Pins Match */
+    .pin_match_confirm.entered {
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* Submit */
+    .submit {
+        width: 100%;
+        background-color: var(--pin-num-match-needed);
+        color: white;
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
         border-radius: 5px;
     }
 
