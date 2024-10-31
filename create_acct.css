@@ -444,6 +444,24 @@ body {
         align-items: center;
     }
 
+    /* Match */
+    .match_ {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        /* text-align: center; */
+        align-items: center;
+        color: var(--pins-match);
+    }
+
+    /* No Match */
+    .no_match {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--pins-no-match);
+    }
 
     /* Submit */
     .submit {
@@ -454,7 +472,7 @@ body {
         padding: 1em;
         font-weight: bold;
         cursor: pointer;
-        font-size: .9rem;
+        font-size: .8rem;
         border-radius: 5px;
     }
 
@@ -462,6 +480,7 @@ body {
     .create_acct {
         text-align: center;
         color: var(--text-color);
+        font-size: .8em;
         font-weight: bold;
     }
     

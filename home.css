@@ -472,6 +472,7 @@ body {
     .create_acct {
         text-align: center;
         color: var(--text-color);
+        font-size: .8em;
         font-weight: bold;
     }
     
