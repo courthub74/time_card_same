@@ -218,7 +218,7 @@ body {
         grid-template-columns: repeat(4, 1fr); 4 columns, equal width */
         display: flex;
         gap: 1vw;
-        /* gap: 2.5vw; */
+        gap: .3vw;
         width: 100%;
     }
 
@@ -228,11 +228,9 @@ body {
         /* background-color: blue; */
         border: var(--text-color) 1px solid;
         padding: 1em 2em;
-        /* padding-bottom: 100%; */
         position: relative;
-        width: 20px;
         /* New Percentage width */
-        width: 10%;
+        width: 100%;
         color: var(--text-color);
         font-size: 1rem;
         text-align: center;
@@ -448,6 +446,8 @@ body {
         position: relative;
         height: 2.3em;
         font-size: 1rem;
+        text-align: center;
+        color: var(--text-color);
     }
 
     /* Remove focus on Input */

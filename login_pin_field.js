@@ -1,3 +1,8 @@
+// LOG IN NAME
+
+// FIRST query the name selected
+
+
 // PIN FIELDS
 
 // This is so the pinfield automatically skips to next pin put after a number is entered
@@ -7,9 +12,7 @@ const inputs = document.querySelectorAll('input');
 
 // query the pin puts to record the number
 const whole_pin = document.getElementById('pin_field');
-// const codeBlock = document.getElementById("code-block");
-// const code = document.getElementById("code");
-// const form = document.querySelector("form");
+
 
 inputs.forEach((input, key) => {
     // If key is not 0
@@ -49,3 +52,5 @@ inputs.forEach((input, key) => {
 //   codeBlock.classList.add("hidden");
 //   code.innerText = "";
 // };
+
+
