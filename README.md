@@ -6,19 +6,25 @@
 
 \*~Use Local Storage to keep the screen mode consistant accross all pages~
 
-\*Pin Code JavaScript
-
-\*Pin Code Match JavaScript
-
 \*Landscape Layout
-
-\*Data Bases for Accounts
-
-\*Create Account Login
 
 \*Add All Pages
 
-\*Add Registration feature
+#### Main Login Page
+
+\*~Pin Code JavaScript~
+
+\*Pin Code Error Handle
+
+\*Create Account Login
+
+#### Registration Page
+
+\*Pin Code Match JavaScript
+
+#### Database
+
+\*Add Account Registration
 
 \*Add Names registered to Name dropdown at login
 
