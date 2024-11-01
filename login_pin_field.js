@@ -13,6 +13,12 @@ const inputs = document.querySelectorAll('input');
 // query the pin puts to record the number
 const whole_pin = document.getElementById('pin_field');
 
+// SUBMIT BUTTON
+
+// change the color of the button when all 4 digits entered
+
+
+
 
 inputs.forEach((input, key) => {
     // If key is not 0
@@ -41,6 +47,15 @@ inputs.forEach((input, key) => {
       const userCode = [...inputs].map((input) => input.value).join("");
     // BELOW grabs each digit as you type
       console.log(userCode);
+
+      // If the Pin Num is full, change color of button
+      if (key === 3) {
+        console.log("All pins full");
+        // query the submit button 
+        let submit_button = document.getElementById('submit_login');
+        // Change the color of the Submit Button
+        submit_button.classList.add('filled');
+      }
     }
     
   });

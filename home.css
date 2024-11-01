@@ -255,6 +255,10 @@ body {
     }
 
     /* Submit filled */
+    .submit.filled {
+        background-color: var(--button-two);
+        color: var(--button-words);
+    }
 
     /* Create an Account */
     .create_acct {
