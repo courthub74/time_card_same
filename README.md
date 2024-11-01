@@ -1,8 +1,6 @@
 # Time Card Application
 
-## Main Branch
-
-### Coded in HTML/CSS only
+## Main Branch Coded in HTML/CSS only
 
 \*~Use Local Storage to keep the screen mode consistant accross all pages~
 
@@ -10,7 +8,7 @@
 
 \*Add All Pages
 
-#### Main Login Page
+### Main Login Page
 
 \*~Pin Code JavaScript~
 
@@ -18,11 +16,11 @@
 
 \*Create Account Login
 
-#### Registration Page
+### Registration Page
 
 \*Pin Code Match JavaScript
 
-#### Database
+### Database
 
 \*Add Account Registration
 
