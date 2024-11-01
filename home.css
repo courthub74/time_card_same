@@ -478,6 +478,18 @@ body {
         border-radius: 5px;
     }
 
+    /* Submit filled */
+    .submit.filled {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
+        width: 100%;
+    }
+
     /* Create an Account */
     .create_acct {
         text-align: center;
