@@ -12,7 +12,7 @@
 
 \*~Pin Code JavaScript~
 
-\*Change Color of Submit Button when all 4 pins entered
+\*~Change Color of Submit Button when all 4 pins entered~
 
 \*Pin Code Error Handle
 
