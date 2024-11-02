@@ -397,6 +397,8 @@ body {
         border: 1px solid var(--text-color);
         background-color: var(--base-color);
         padding: .7em;
+        color: var(--text-color);
+        text-align: center;
         /* padding: 0 1em 0 0; */
         /* width: 100%; */
     }
