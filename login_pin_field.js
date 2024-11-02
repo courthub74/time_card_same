@@ -5,6 +5,8 @@
 // query the whole form
 const form = document.querySelector('form');
 
+// CLEAR BUTTON 
+
 // query the clear button
 const clear_button = document.getElementById('reset_button');
 
@@ -60,11 +62,6 @@ inputs.forEach((input, key) => {
       // If the Pin Num is full, change color of button
       if (key === 3) {
         console.log("All pins full");
-        // SUBMIT BUTTON
-        // change the color of the button when all 4 digits entered
-        // query the submit button 
-        // let submit_button = document.getElementById('submit_login');
-        // Change the color of the Submit Button
         submit_button.classList.add('filled');
       } else if (key !== 3) {
         submit_button.classList.remove('filled');

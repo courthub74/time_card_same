@@ -193,12 +193,11 @@ body {
         background-color: var(--base-color);
         /* background-color: blue; */
         border: var(--text-color) 1px solid;
-        padding: 1em 2em;
+        padding: 1em 1em;
         /* padding-bottom: 100%; */
         position: relative;
-        width: 20px;
-        /* New Percentage width */
-        width: 10%;
+        height: 1.6em;
+        width: 100%;
         color: var(--text-color);
         font-size: 1rem;
         text-align: center;
@@ -209,10 +208,24 @@ body {
         outline: none;
     }
 
+     /* Reset the Form Button */
+     .reset_button {
+        margin: .5em 0 0 0;
+        background-color: var(--primary-color);
+        background-color: var(--base-color);
+        border: 1px solid var(--text-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color);
+        font-family: Poppins;
+        /* padding: .3em; */
+        /* font-weight: bold; */
+    }
+
     /* PINS */
     .pin_match_confirm {
-        /* display: none; */
-        opacity: 0;
+        display: none;
+        /* opacity: 0; */
     }
 
     /* Pins Match */
@@ -425,6 +438,8 @@ body {
         position: relative;
         height: 2.4em;
         font-size: 1rem;
+        text-align: center;
+        color: var(--text-color);
     }
 
     /* Remove focus on Input */
@@ -432,9 +447,24 @@ body {
         outline: none;
     }
 
+     /* Reset the Form Button */
+     .reset_button {
+        margin: .5em 0 0 0;
+        background-color: var(--primary-color);
+        background-color: var(--base-color);
+        border: 1px solid var(--text-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color);
+        /* padding: .3em; */
+        /* font-weight: bold; */
+        font-family: Poppins;
+    }
+
     /* PINS */
     .pin_match_confirm {
         opacity: 0;
+        display: none;
     }
 
     /* Pins Match */
