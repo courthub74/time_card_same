@@ -241,6 +241,19 @@ body {
         outline: none;
     }
 
+    /* Reset the Form Button */
+    .reset_button {
+        margin: 1em 0 0 0;
+        background-color: var(--primary-color);
+        background-color: var(--base-color);
+        border: 1px solid var(--text-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--button-words);
+        padding: .3em;
+        font-weight: bold;
+    }
+
     /* Submit Button */
     .submit {
         width: 100%;
@@ -463,6 +476,19 @@ body {
     /* Remove focus on Input */
     input:focus {
         outline: none;
+    }
+
+    /* Reset the Form Button */
+    .reset_button {
+        margin: 1em 0 0 0;
+        background-color: var(--primary-color);
+        background-color: var(--base-color);
+        border: 1px solid var(--text-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--button-words);
+        padding: .3em;
+        font-weight: bold;
     }
 
     /* Submit Button */

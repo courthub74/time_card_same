@@ -22,6 +22,10 @@ const inputs = document.querySelectorAll('input');
 // query the pin puts to record the number
 const whole_pin = document.getElementById('pin_field');
 
+// SUBMIT BUTTON
+// change the color of the button when all 4 digits entered
+// query the submit button 
+let submit_button = document.getElementById('submit_login');
 
 
 
@@ -59,9 +63,11 @@ inputs.forEach((input, key) => {
         // SUBMIT BUTTON
         // change the color of the button when all 4 digits entered
         // query the submit button 
-        let submit_button = document.getElementById('submit_login');
+        // let submit_button = document.getElementById('submit_login');
         // Change the color of the Submit Button
         submit_button.classList.add('filled');
+      } else if (key !== 3) {
+        submit_button.classList.remove('filled');
       }
     }
     
@@ -72,8 +78,7 @@ inputs.forEach((input, key) => {
 // Call this function in the Clear button
 const reset = () => {
   form.reset();
-  // codeBlock.classList.add("hidden");
-  // code.innerText = "";
+  submit_button.classList.remove('filled');
 };
 
 
