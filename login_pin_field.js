@@ -34,12 +34,12 @@ let submit_button = document.getElementById('submit_login');
 inputs.forEach((input, key) => {
     // If key is not 0
   if (key !== 0) {
-        // Event listener for focus when input focused on (for skip ahead)
+    // Event listener for focus when input focused on (for skip ahead)
     input.addEventListener("click", function () {
       inputs[0].focus();
     });
   }
-    // Add event listener function to input that iterates through the inputs
+  // Add event listener function to input that iterates through the inputs
   input.addEventListener("keyup", function () {
     if (input.value) {
         console.log("Pin Num entered")
@@ -47,14 +47,11 @@ inputs.forEach((input, key) => {
             // because 0 is starting point
                 // jump focus ahead
       if (key === 3) {
-    //     // Last one tadaa
-    // const userCode = [...inputs].map((input) => input.value).join("");
-    //     // This is for the revelation on the page of your Pin #
-    //     // codeBlock.classList.remove("hidden");
-    //     // code.innerText = userCode;
+      // Do nothing as long as you have 4 pin nums
       } else {
         inputs[key + 1].focus();
       }
+      // To Read the Pin Nums for login match
       const userCode = [...inputs].map((input) => input.value).join("");
     // BELOW grabs each digit as you type
       console.log(userCode);

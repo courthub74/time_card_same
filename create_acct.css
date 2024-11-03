@@ -189,12 +189,27 @@ body {
     }
 
     /* Each Pin field */
+
+    /* First Row */
     .pin_put {
         background-color: var(--base-color);
         /* background-color: blue; */
         border: var(--text-color) 1px solid;
         padding: 1em 1em;
-        /* padding-bottom: 100%; */
+        position: relative;
+        height: 1.6em;
+        width: 100%;
+        color: var(--text-color);
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Second Row */
+    .pin_put_2 {
+        background-color: var(--base-color);
+        /* background-color: blue; */
+        border: var(--text-color) 1px solid;
+        padding: 1em 1em;
         position: relative;
         height: 1.6em;
         width: 100%;
@@ -218,8 +233,7 @@ body {
         border-radius: 5px;
         color: var(--text-color);
         font-family: Poppins;
-        /* padding: .3em; */
-        /* font-weight: bold; */
+        cursor: pointer;
     }
 
     /* PINS */
@@ -431,7 +445,21 @@ body {
     }
 
     /* Each Pin field */
+
+    /* First Row */
     .pin_put {
+        background-color: var(--base-color);
+        border: var(--text-color) 1px solid;
+        width: 100%;
+        position: relative;
+        height: 2.4em;
+        font-size: 1rem;
+        text-align: center;
+        color: var(--text-color);
+    }
+
+    /* Second Row */
+    .pin_put_2 {
         background-color: var(--base-color);
         border: var(--text-color) 1px solid;
         width: 100%;
@@ -456,9 +484,8 @@ body {
         border: none;
         border-radius: 5px;
         color: var(--text-color);
-        /* padding: .3em; */
-        /* font-weight: bold; */
         font-family: Poppins;
+        cursor: pointer;
     }
 
     /* PINS */
