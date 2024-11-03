@@ -63,3 +63,16 @@ inputs.forEach((input, key) => {
     }
   })
 });
+
+// Call this function in the Clear button
+const reset = () => {
+    form.reset();
+    // change the class list of the button below
+};
+
+// Add event listener to the reset button 
+clear_button.addEventListener('click', () => {
+    console.log("reset button on create acct page");
+    // Call Reset form
+    reset();
+});
