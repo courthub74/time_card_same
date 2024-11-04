@@ -30,7 +30,7 @@ const whole_pin = document.getElementById('pin_field');
 let submit_button = document.getElementById('submit_login');
 
 
-
+// JS for pin puts
 inputs.forEach((input, key) => {
     // If key is not 0
   if (key !== 0) {
