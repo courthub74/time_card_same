@@ -44,7 +44,7 @@ inputs.forEach((input, key) => {
 
     // For FIRST PIN ROW
     if (input.value) {
-        console.log("Pin Num entered");
+        console.log("First Row");
         // NOW let's say if the key is less than 4
             // jump focus ahead
         if (key === 3) {
@@ -70,6 +70,7 @@ inputs.forEach((input, key) => {
                 console.log("Second Row");
                 if (key_2 === 3) {
                     // Do nothing as long as you have 4 pin nums
+                    // inputs_two[0].focus();
                 } else {
                     inputs_two[key_2 + 1].focus();
                 }
@@ -83,7 +84,7 @@ inputs.forEach((input, key) => {
   });
 });
 
-console.log(`The first Row Pin: ${inputs}`);
+// console.log(`The first Row Pin: ${inputs_two}`);
 
  // If the pin numbers match
 // Alert that they match
