@@ -60,28 +60,28 @@ inputs.forEach((input, key) => {
         // Print the digits out to the console
         console.log(createPins);
     }
-
-    // For SECOND PIN ROW
-    // NOW map through the inputs_two
-    inputs_two.forEach((input_2, key_2) => {
-        input_2.addEventListener("keyup", function () {
-            if (input_2.value) {
-                inputs_two[0].focus();
-                console.log("Second Row");
-                if (key_2 === 3) {
-                    // Do nothing as long as you have 4 pin nums
-                    // inputs_two[0].focus();
-                } else {
-                    inputs_two[key_2 + 1].focus();
-                }
-                // NOW lets record the Pin Nums for login match
-                const createPins_2 = [...inputs_two].map((input_2) => input_2.value).join("");
-                // Print the pin nums in the console
-                console.log(createPins_2);
-            }
-        });
-    });
   });
+});
+
+// For SECOND PIN ROW
+// NOW map through the inputs_two
+inputs_two.forEach((input_2, key_2) => {
+    input_2.addEventListener("keyup", function () {
+        if (input_2.value) {
+            inputs_two[0].focus();
+            console.log("Second Row");
+            if (key_2 === 3) {
+                // Do nothing as long as you have 4 pin nums
+                // inputs_two[0].focus();
+            } else {
+                inputs_two[key_2 + 1].focus();
+            }
+            // NOW lets record the Pin Nums for login match
+            const createPins_2 = [...inputs_two].map((input_2) => input_2.value).join("");
+            // Print the pin nums in the console
+            console.log(createPins_2);
+        }
+    });
 });
 
 // console.log(`The first Row Pin: ${inputs_two}`);

@@ -329,7 +329,15 @@ body {
         border-radius: 5px;
     }
 
-    .submit.match {
+    /* Submit Disabled */
+    .submit:disabled {
+        color: var(--text-color);
+        opacity: .6;
+        cursor: not-allowed;
+    }
+
+    /* Submit Match */
+    /* .submit.match {
         background-color: var(--button-two);
         color: var(--button-words);
         border: none;
@@ -339,7 +347,7 @@ body {
         font-size: .9rem;
         width: 100%;
         border-radius: 5px;
-    }
+    } */
 
     /* Create an Account */
     .create_acct {
@@ -590,11 +598,15 @@ body {
         font-weight: bold;
         cursor: pointer;
         font-size: .8rem;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
 
     /* Submit Disabled */
-
+    .submit:disabled {
+        color: rgb(158, 151, 151);
+        opacity: .5;
+        cursor: not-allowed;
+    }
 
     /* Create an Account */
     .create_acct {
