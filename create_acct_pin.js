@@ -44,7 +44,7 @@ inputs.forEach((input, key) => {
             const createPins = [...inputs].map((input) => input.value).join("");
             // Print the digits out to the console
             console.log(`The First Pin Number is: ${createPins}`);
-            // After 4 pins entered, place focus on next set
+            // After 4 pins entered, jump to next set
             inputs_two[0].focus();
         } else {
             // Less than 4 pin nums skip to next input field (First Set)
@@ -102,26 +102,31 @@ inputs_two.forEach((input_2, key_2) => {
         if (input_2.value) {
             // Test print
             console.log("second row: compare");
-            // Map through the key_2
-            const pinsTwo = [...inputs_two].map((input_2) => input_2.value).join("");
-            // Print the digits to the console
-            console.log(`The Second Pin for comparing to First: ${pinsTwo}`);
-            // Get the inputs from One
-            inputs.forEach((input_1, key_1) => {
-                // Get the keys for this
-                input_1.addEventListener("keyup", function () {
+            // You need all 4 pins to get filled before comparison
+            if (key_2 === 3) {
+                // Map through the key_2
+                const pinsTwo = [...inputs_two].map((input_2) => input_2.value).join("");
+                // Print the digits to the console
+                console.log(`The Second Pin for comparing to First: ${pinsTwo}`);
+                // Get the inputs from One
+                inputs.forEach((input_1) => {
+                
                     // For values entered in the First
                     if (input_1.value) {
                         // Map through
                         const pinsOneCompare = [...inputs].map((input_1) => input_1.value).join("");
                         // Print digits to the console
                         console.log(`The First Pin for comparing to the Second: ${pinsOneCompare}`);
+                        // For comparing the second to first
+                        console.log(`Second to first: ${pinsTwo}`);
                         if (pinsTwo === pinsOneCompare) {
                             console.log("The Pins match");
+                        } else if (pinsTwo !== pinsOneCompare) {
+                            console.log("Pins Don't match");
                         }
                     }
                 });
-            });
+            }
         }
     })
 })

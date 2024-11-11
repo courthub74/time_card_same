@@ -555,22 +555,41 @@ body {
     }
 
     /* PINS */
-    .pin_match_confirm {
-        opacity: 0;
-        display: none;
-    }
 
-    /* Pins Match */
-    .pin_match_confirm.entered {
-        opacity: 1;
+    /* Pin confirm Div (Change the class of the Whole div according to Pins entered) */
+    .pin_match_confirm {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
+    /* Pins Match */
+    /* Tell last child (no match) to go away */
+    .match #pin_match_confirm:last-child {
+        display: none;
+    }
+
+    /* Make first child (match) visible */
+    .match #pin_match_confirm:first-child {
+        display: block;
+    }
+    /* Pins Don't Match */
+    /* Tell first child (match) to go away */
+    .no_match #pin_match_confirm:first-child {
+        display: none;
+    }
+
+    /* Make last child (no match) come to the stage */
+    .no_match #pin_match_confirm:last-child {
+        display: block;
+    }
+
+
     /* Match */
     .match_ {
+        display: none;
+    }
+    .match_.entered {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -581,6 +600,9 @@ body {
 
     /* No Match */
     .no_match {
+        display: none;
+    }
+    .no_match.entered {
         text-align: center;
         display: flex;
         justify-content: center;
