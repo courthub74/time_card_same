@@ -32,67 +32,100 @@ let submit_acct_info = document.getElementById('submit_acct_info');
 
 // JS for pin puts
 inputs.forEach((input, key) => {
-    // If key is not 0
-    if (key !== 0) {
-        // Event listener for focus when input focused
-        input.addEventListener("click", function () {
-            inputs[0].focus();
-        });
-    }
   // Add event listener function to input that iterates through the inputs
   input.addEventListener("keyup", function () {
-
     // For FIRST PIN ROW
     if (input.value) {
         console.log("First Row");
         // NOW let's say if the key is less than 4
             // jump focus ahead
         if (key === 3) {
-            // Do nothing to first set as long as you have 4 pin nums
+            // Let's read the Pin Nums for matching and login
+            const createPins = [...inputs].map((input) => input.value).join("");
+            // Print the digits out to the console
+            console.log(`The First Pin Number is: ${createPins}`);
             // After 4 pins entered, place focus on next set
             inputs_two[0].focus();
         } else {
             // Less than 4 pin nums skip to next input field (First Set)
             inputs[key + 1].focus();
         }
-        // Let's read the Pin Nums for matching and login
-        const createPins = [...inputs].map((input) => input.value).join("");
-        // Print the digits out to the console
-        console.log(createPins);
-    }
+     }
   });
 });
 
 // For SECOND PIN ROW
 // NOW map through the inputs_two
 inputs_two.forEach((input_2, key_2) => {
+    // Record the keys entered
     input_2.addEventListener("keyup", function () {
         if (input_2.value) {
-            inputs_two[0].focus();
+            // inputs_two[0].focus();
             console.log("Second Row");
+            // if all 4 inputs are filled
             if (key_2 === 3) {
-                // Do nothing as long as you have 4 pin nums
-                // inputs_two[0].focus();
+                // Map through the pin field and store it in a variable
+                const createPins_2 = [...inputs_two].map((input_2) => input_2.value).join("");
+                // Print the pin nums in the console
+                console.log(`The Second Pin Number is: ${createPins_2}`);
             } else {
                 inputs_two[key_2 + 1].focus();
             }
-            // NOW lets record the Pin Nums for login match
-            const createPins_2 = [...inputs_two].map((input_2) => input_2.value).join("");
-            // Print the pin nums in the console
-            console.log(createPins_2);
         }
     });
 });
 
-// console.log(`The first Row Pin: ${inputs_two}`);
+//////////////////////////////////////////////////////////////
+// COMPARISON MAPS BELOW
 
- // If the pin numbers match
-// Alert that they match
-// change color of submit button
-if (inputs === inputs_two) {
-    console.log("Pin Numbers Match");
-    
-}
+// Pin Row 1
+inputs.forEach((input_1, key_1) => {
+    // Record Keys for first pin field comparison
+    input_1.addEventListener("keyup", function () {
+        // For values entered in the FIRST PIN ROW
+        if (input_1.value) {
+            // Test print
+            console.log("first row: compare");
+            // Map through the key_1
+            const pinsOne = [...inputs].map((input_1) => input_1.value).join("");
+            // Print the digits to the console
+            console.log(`The First Pin for comparing to Second: ${pinsOne}`);
+        }
+    });
+});
+
+// Pin Row 2
+inputs_two.forEach((input_2, key_2) => {
+    // Record Keys for first pin field comparison
+    input_2.addEventListener("keyup", function () {
+        // For values entered in the SECOND PIN ROW
+        if (input_2.value) {
+            // Test print
+            console.log("second row: compare");
+            // Map through the key_2
+            const pinsTwo = [...inputs_two].map((input_2) => input_2.value).join("");
+            // Print the digits to the console
+            console.log(`The Second Pin for comparing to First: ${pinsTwo}`);
+            // Get the inputs from One
+            inputs.forEach((input_1, key_1) => {
+                // Get the keys for this
+                input_1.addEventListener("keyup", function () {
+                    // For values entered in the First
+                    if (input_1.value) {
+                        // Map through
+                        const pinsOneCompare = [...inputs].map((input_1) => input_1.value).join("");
+                        // Print digits to the console
+                        console.log(`The First Pin for comparing to the Second: ${pinsOneCompare}`);
+                        if (pinsTwo === pinsOneCompare) {
+                            console.log("The Pins match");
+                        }
+                    }
+                });
+            });
+        }
+    })
+})
+
 
 // Call this function in the Clear button
 const reset = () => {
