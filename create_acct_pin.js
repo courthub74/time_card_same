@@ -1,4 +1,4 @@
-// WHOLE FORM
+// GLOBAL VARIABLES
 
 // FOR A CLEAR BUTTON TO RESET THE PAGE
 
@@ -28,6 +28,14 @@ const whole_pin = document.getElementById('pin_field');
 // change the color of the button when all 4 digits entered
 // query the submit button
 let submit_acct_info = document.getElementById('submit_acct_info');
+
+// MATCH NOTIFICATION
+
+// Match
+let match_notify = document.querySelector('.match_');
+
+// No Match
+let no_match_notify = document.querySelector('.no_match');
 
 
 // JS for pin puts
@@ -122,9 +130,21 @@ inputs_two.forEach((input_2, key_2) => {
                         // If the Pins Match
                         if (pinsTwo === pinsOneCompare) {
                             console.log("The Pins match");
+                            // Show the Pins Match notification
+                            match_notify.classList.add('entered');
+                            // Remove Pins Don't match
+                            no_match_notify.classList.remove('entered');
+                            // Enable the Submit button
+                            submit_acct_info.removeAttribute('disabled');
                         // If the Pins Don't Match 
                         } else if (pinsTwo !== pinsOneCompare) {
                             console.log("Pins Don't match");
+                            // Remove entered from match ?
+                            match_notify.classList.remove('entered');
+                            // Show the Pins Don't match notification
+                            no_match_notify.classList.add('entered');
+                            // Disable the Submit button (HTML name, css class)
+                            submit_acct_info.disabled = true;
                         }
                     }
                 });
@@ -137,7 +157,12 @@ inputs_two.forEach((input_2, key_2) => {
 // Call this function in the Clear button
 const reset = () => {
     form.reset();
-    // change the class list of the button below
+    // Delete the Match Notify
+    match_notify.classList.remove('entered');
+    // Delete the No Match
+    no_match_notify.classList.remove('entered');
+    // Disable the Submit Button
+    submit_acct_info.setAttribute('disabled');
 };
 
 // Add event listener to the reset button 

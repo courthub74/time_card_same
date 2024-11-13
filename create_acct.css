@@ -246,43 +246,17 @@ body {
     }
 
     /* PINS */
+
+    /* PINS NOTIFY DIV */
     .pin_match_confirm {
-        /* display: none; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* background-color: blue; */
         margin-top: -1em;
+        transition: all .4s ease-in;
+        padding: 1em;
     }
-
-    /* Pins Match
-    .pin_match_confirm .match_:first-child {
-        display: none;
-    }
-
-    /* Pins Don't Match */
-    /* .pin_match_confirm .no_match:last-child {
-        display: none;
-    } */
-
-    /* Pins (last-child) */
-    /* .pin_match_confirm .match_ .entered:first-child {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--pins-match);
-    }  */
-
-    /* Pins Match */
-    /* .pin_match_confirm.entered {
-        opacity: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    } */
 
     /* Match (first-child)*/
     .match_ {
@@ -294,10 +268,10 @@ body {
         opacity: 1;
         position: absolute;
         display: flex;
+        /* display: inline-block; */
         justify-content: center;
         align-items: center;
         color: var(--pins-match);
-        transition: all .2s ease-in;
     }
 
     /* No Match (last-child) */
@@ -313,12 +287,13 @@ body {
         justify-content: center;
         align-items: center;
         color: var(--pins-no-match);
-        transition: all .2s ease-in;
+        margin-top: -1em;
     }
 
     /* Submit */
     .submit {
-        background-color: var(--pin-num-match-needed);
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--button-two);
         color: white;
         border: none;
         padding: 1em;
@@ -331,6 +306,7 @@ body {
 
     /* Submit Disabled */
     .submit:disabled {
+        background-color: var(--pin-num-match-needed);
         color: var(--text-color);
         opacity: .6;
         cursor: not-allowed;
