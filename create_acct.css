@@ -151,7 +151,7 @@ body {
         align-items: center;
         gap: 2em;
         width: 30%;
-        margin-top: 1em;
+        margin-top: 2em;
         /* background-color: blue; */
     }
 
@@ -192,7 +192,7 @@ body {
         /* display: grid;
         grid-template-columns: repeat(4, 1fr); 4 columns, equal width */
         display: flex;
-        gap: 1vw;
+        /* gap: 1vw; */
         gap: .3vw;
         width: 100%;
     }
@@ -206,7 +206,7 @@ body {
         border: var(--text-color) 1px solid;
         padding: 1em 1em;
         position: relative;
-        height: 1.6em;
+        /* height: 1.6em; */
         width: 100%;
         color: var(--text-color);
         font-size: 1rem;

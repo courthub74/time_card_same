@@ -132,7 +132,7 @@ body {
         justify-content: center;
         padding: .5em 3em;
         font-size: 1.2rem;
-        width: 50%;
+        width: 60%;
     }
 
      /* Form */
@@ -142,6 +142,7 @@ body {
         align-items: center;
         gap: 3em;
         width: 30%;
+        /* width: 25%; */
         margin-top: 3em;
         /* background-color: blue; */
     }
@@ -217,7 +218,7 @@ body {
         /* display: grid;
         grid-template-columns: repeat(4, 1fr); 4 columns, equal width */
         display: flex;
-        gap: 1vw;
+        /* gap: 1vw; */
         gap: .3vw;
         width: 100%;
     }
@@ -227,7 +228,7 @@ body {
         background-color: var(--base-color);
         /* background-color: blue; */
         border: var(--text-color) 1px solid;
-        padding: 1em 2em;
+        padding: 1em 1em;
         position: relative;
         /* New Percentage width */
         width: 100%;
