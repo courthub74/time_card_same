@@ -119,8 +119,10 @@ inputs_two.forEach((input_2, key_2) => {
                         console.log(`The First Pin for comparing to the Second: ${pinsOneCompare}`);
                         // For comparing the second to first
                         console.log(`Second to first: ${pinsTwo}`);
+                        // If the Pins Match
                         if (pinsTwo === pinsOneCompare) {
                             console.log("The Pins match");
+                        // If the Pins Don't Match 
                         } else if (pinsTwo !== pinsOneCompare) {
                             console.log("Pins Don't match");
                         }

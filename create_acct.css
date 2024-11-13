@@ -193,7 +193,7 @@ body {
         grid-template-columns: repeat(4, 1fr); 4 columns, equal width */
         display: flex;
         gap: 1vw;
-        /* gap: 2.5vw; */
+        gap: .3vw;
         width: 100%;
     }
 
