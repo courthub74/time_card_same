@@ -301,7 +301,7 @@ body {
         cursor: pointer;
         font-size: .9rem;
         width: 100%;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
 
     /* Submit Disabled */
@@ -589,7 +589,8 @@ body {
     /* Submit */
     .submit {
         width: 100%;
-        background-color: var(--pin-num-match-needed);
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--button-two);
         color: white;
         border: none;
         padding: 1em;
@@ -601,8 +602,9 @@ body {
 
     /* Submit Disabled */
     .submit:disabled {
-        color: rgb(158, 151, 151);
-        opacity: .5;
+        background-color: var(--pin-num-match-needed);
+        color: var(--text-color);
+        opacity: .6;
         cursor: not-allowed;
     }
 
