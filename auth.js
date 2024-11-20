@@ -1,11 +1,11 @@
 // Listen for auth status change
 
-// SIGN IN USER
+// LOGIN THE USER
 
 // Query the Sign in form (name and PIN)
 const loginForm = document.getElementById('login_form');
 
-// REGISTER THE USER
+// LOGIN THE USER
 
 // add event listener to the login form upon submitting
 loginForm.addEventListener('submit', (e) => {
@@ -49,6 +49,8 @@ loginForm.addEventListener('submit', (e) => {
         console.log(`The Pin Entered: ${pin_auth_value}`);
     });
 });
+
+// NOW TAKE THIS DATA AND MATCH IT WITH THE REGISTERED IN FIREBASE
 
 
 
