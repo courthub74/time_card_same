@@ -30,7 +30,7 @@ const whole_pin = document.getElementById('pin_field');
 let submit_button = document.getElementById('submit_login');
 
 
-// JS for pin puts
+// JS for pin puts to calculate filling the 4 inputs before you do things
 inputs.forEach((input, key) => {
     // If key is not 0
   if (key !== 0) {
@@ -39,7 +39,7 @@ inputs.forEach((input, key) => {
       inputs[0].focus();
     });
   }
-  // Add event listener function to input that iterates through the inputs
+  // Add event listener function to input that iterates through the inputs upon typing
   input.addEventListener("keyup", function () {
     if (input.value) {
         console.log("Pin Num entered")
@@ -51,7 +51,7 @@ inputs.forEach((input, key) => {
       } else {
         inputs[key + 1].focus();
       }
-      // To Read the Pin Nums for login match
+      // To Read the Pin Nums for login match (Maps through inputs and joins them into an array)
       const userCode = [...inputs].map((input) => input.value).join("");
     // BELOW grabs each digit as you type
       console.log(userCode);

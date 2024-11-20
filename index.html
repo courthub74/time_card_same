@@ -7,6 +7,34 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./home.css">
+
+    <!-- FIREBASE JS -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // DONT NEED ALL THE LIBRARIES JUST:
+        // AUTH
+        "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+        // FIREBASE FIRESTORE
+        "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"
+
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyClebQ_EbOEFkP64ljsyhbhGI6sNwtsvYE",
+          authDomain: "time-card-db-643c7.firebaseapp.com",
+          projectId: "time-card-db-643c7",
+          storageBucket: "time-card-db-643c7.firebasestorage.app",
+          messagingSenderId: "1084464719976",
+          appId: "1:1084464719976:web:e925dbda8c69d14bc033dd"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+
 </head>
 <body>
 
@@ -41,7 +69,7 @@
          </div>
 
          <!-- Form -->
-         <form action="#">
+         <form id="login_form">
 
             <!-- Name -->
              <div class="input_div">
@@ -50,15 +78,15 @@
                  <!-- Name will be read from DB -->
                 <div class="dropdown">
                     <select id="dropdown_btn" class=".dropdown_btn">
-                        <div class="name_list" id="name_list">
+                        <!-- <div class="name_list" id="name_list"> -->
                             <option value="#">Select your Name:</option>
-                            <!-- EACH OF THESE WILL BE READ FROM THE DB -->
-                            <option value="#">Lastname, Onename</option>
-                            <option value="#">Lastname, Twoname</option>
-                            <option value="#">Lastname, Threename</option>
-                            <option value="#">Lastname, Fourname</option>
-                            <option value="#">Lastname, Fivename</option>
-                        </div>
+                            <!-- EACH Value WILL BE READ FROM THE DB -->
+                            <option value="Lastname, One">Lastname, Onename</option>
+                            <option value="Lastname, Two">Lastname, Twoname</option>
+                            <option value="Lastname, Three">Lastname, Threename</option>
+                            <option value="Lastname, Four">Lastname, Fourname</option>
+                            <option value="Lastname, Five">Lastname, Fivename</option>
+                        <!-- </div> -->
                     </select>
                 </div>
              </div>
@@ -94,5 +122,7 @@
  <script src="./names_drop.js"></script>
  <!-- PIN FIELDS FOR LOGIN -->
   <script src="./login_pin_field.js"></script>
+  <!-- Authentication -->
+  <script src="./auth.js"></script>
 
 </html>
