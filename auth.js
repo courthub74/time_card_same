@@ -12,12 +12,13 @@ loginForm.addEventListener('submit', (e) => {
     // So Submit event doesn't refresh the page
     e.preventDefault();
 
-    // Retrieve user info using square bracket notation
-    // query inside the form for particular input field
+    // Test print button function
+    console.log("Submit Button Pressed");
 
     // NAME FIELD
 
     // name field (May need to iterate through each field)
+    
     // Query the name inputs
     const name_selects = document.querySelector('#dropdown_btn'); //try getelementbyID next
 

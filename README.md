@@ -20,7 +20,7 @@
 
 ### Registration Page
 
-\*Pin Code Match JavaScript
+\*~Pin Code Match JavaScript~
 
 ### Database
 

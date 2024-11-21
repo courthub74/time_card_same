@@ -87,7 +87,7 @@ inputs_two.forEach((input_2, key_2) => {
 // COMPARISON MAPS BELOW
 
 // Pin Row 1
-inputs.forEach((input_1, key_1) => {
+inputs.forEach((input_1) => {
     // Record Keys for first pin field comparison
     input_1.addEventListener("keyup", function () {
         // For values entered in the FIRST PIN ROW
