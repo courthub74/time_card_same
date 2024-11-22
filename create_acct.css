@@ -12,7 +12,7 @@
     --pin-num-match-needed: #393636;
     --pins-match: #0AA51C;
     --pins-no-match: #DE391C;
-    --match-background: #393636;
+    --match-background: #ffffff;
 }
 
 /* Darkmode (for Nite Mode) */
@@ -143,7 +143,7 @@ body {
         flex-direction: column;
         gap: 2em;
         width: 30%;
-        margin-top: 3em;
+        margin-top: 1em;
     }
 
     /* Form */
@@ -160,6 +160,12 @@ body {
     /* The Labels */
     label {
         font-size: 1rem;
+    }
+
+    /* Name Inputs */
+    .name_inputs {
+        /* background-color: #0AA51C; */
+        width: 100%;
     }
 
     /* Input Divs */
@@ -255,9 +261,11 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: -1em;
+        /* margin-top: -1em; */
         transition: all .4s ease-in;
-        padding: 1em;
+        /* padding: 1em; */
+        /* background-color: #0AA51C; */
+        width: 100%;
     }
 
     /* Match (first-child)*/
@@ -274,13 +282,12 @@ body {
         justify-content: center;
         align-items: center;
         color: var(--pins-match);
-        background-color: var(--theme-switch-backgrd);
         background-color: var(--match-background);
-        padding: .7em 6em;
+        /* padding: .7em 6em; */
         border-radius: 5px;
-        border: 1px solid var(--pins-match);
+        /* border: 1px solid var(--pins-match); */
         font-size: .8em;
-        /* width: 50%; */
+        width: 100%;
     }
 
     /* No Match (last-child) */
@@ -292,17 +299,18 @@ body {
     .no_match.entered {
         opacity: 1;
         position: relative;
+        /* display: inline-block; */
         display: flex;
         justify-content: center;
         align-items: center;
         color: var(--pins-no-match);
-        margin-top: -1em;
+        /* margin-top: -1em; */
         background-color: var(--match-background);
         border-radius: 5px;
-        border: 1px solid var(--pins-no-match);
-        padding: .7em 5em;
+        /* border: 1px solid var(--pins-no-match); */
+        /* padding: .7em 5em; */
         font-size: .8em;
-        width: 55%;
+        width: 100%;
     }
 
     /* Submit */

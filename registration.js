@@ -14,6 +14,14 @@ const create_acct_form = document.getElementById('create_acct_form');
 // Query the submit button
 const submit_registration = document.getElementById('submit_acct_info');
 
+// Query the Pin match confirmations
+
+// Match
+const match_confirm = document.querySelector('.match_');
+
+// No Match
+const no_match_confirm = document.querySelector('.no_match');
+
 
 // Add the event listener to submit button to register the user
 create_acct_form.addEventListener('submit', (e) => {
@@ -45,6 +53,18 @@ create_acct_form.addEventListener('submit', (e) => {
     
     // THEN reset the page
     create_acct_form.reset();
+
+    // Set the Submit back to disabled (if statements)
+    submit_registration.disabled = true;
+
+    // for MATCH
+    match_confirm.classList.remove('entered');
+
+    // for NO MATCH (don't really need)
+    // no_match_confirm.classList.remove('entered');
+
+    // Clear the Pin match confirmed
+
 });
 
 // take user to confirmation page
