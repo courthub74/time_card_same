@@ -597,9 +597,9 @@ body {
         align-items: center;
         color: var(--pins-match);
         background-color: var(--match-background);
-        padding: .3em;
+        /* padding: .3em; */
         border-radius: 5px;
-        border: 1px solid var(--pins-match);
+        /* border: 1px solid var(--pins-match); */
         font-size: .8em;
         width: 50%;
     }
@@ -616,8 +616,8 @@ body {
         color: var(--pins-no-match);
         background-color: var(--match-background);
         border-radius: 5px;
-        border: 1px solid var(--pins-no-match);
-        padding: .4em 2em;
+        /* border: 1px solid var(--pins-no-match); */
+        /* padding: .4em 2em; */
         font-size: .8em;
         width: 100%;
     }
