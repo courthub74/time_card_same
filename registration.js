@@ -36,20 +36,27 @@ create_acct_form.addEventListener('submit', (e) => {
     let first = firstname.value;
     // Test print for now
     console.log(first);
-    // NEXT use auth.createUserWithNameAndPassword async function 
-
+    
     // Retrieve user last name text, store it in variable
     let last = lastname.value;
     // Test print for now
     console.log(last);
+    // NEXT use auth.createUserWithNameAndPassword async function (take first and last name into this)
 
     // in here, query the pin inputs
     const pin_set = document.querySelectorAll('.pin_put');
     // Test print the node
-    console.log(pin_set);
+    // console.log(pin_set);
 
     // NOW map through the first pins row
         // as the second pin field is just there to confirm and activate submit button
+    pin_set.forEach(() => {
+        // READING THE PIN INPUT VALUES
+        // Ok NOW iterate through them (use MAP)
+        const pin_set_value = [...pin_set].map((each_pin_num) => each_pin_num.value).join("");
+        // Test print
+        console.log(`The Pin Entered: ${pin_set_value}`);
+    });
     
     // THEN reset the page
     create_acct_form.reset();
@@ -57,16 +64,15 @@ create_acct_form.addEventListener('submit', (e) => {
     // Set the Submit back to disabled (if statements)
     submit_registration.disabled = true;
 
+     // Clear the Pin match confirmed
+
     // for MATCH
     match_confirm.classList.remove('entered');
 
     // for NO MATCH (don't really need)
     // no_match_confirm.classList.remove('entered');
-
-    // Clear the Pin match confirmed
-
 });
 
-// take user to confirmation page
+// take user to confirmation page 
 
 
