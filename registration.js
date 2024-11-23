@@ -69,10 +69,14 @@ create_acct_form.addEventListener('submit', (e) => {
     // for MATCH
     match_confirm.classList.remove('entered');
 
+    // take user to confirmation page 
+    window.location.href = './acct_type.html';
+
     // for NO MATCH (don't really need)
     // no_match_confirm.classList.remove('entered');
 });
 
-// take user to confirmation page 
+
+
 
 
