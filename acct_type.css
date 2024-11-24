@@ -13,6 +13,7 @@
     --pins-match: #0AA51C;
     --pins-no-match: #DE391C;
     --match-background: #ffffff;
+    --acct-type-button-background: rgb(92, 89, 89);
 }
 
 /* Darkmode (for Nite Mode) */
@@ -29,6 +30,7 @@
     --pins-match: #0AA51C;
     --pins-no-match: #DE391C;
     --match-background: #1E1E1E;
+    --acct-type-button-background: #181717;
 }
 
 /* ********** */
@@ -160,7 +162,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2em;
+        gap: 3em;
         /* background-color: #3a435d; */
         width: 100%;
     }
@@ -172,14 +174,14 @@ body {
         gap: 2em;
         border: 2px solid black;
         width: 100%;
-        background-color: var(--button-color);
+        background-color: var(--acct-type-button-background);
         color: white;
         padding: 3em;
         cursor: pointer;
     }
 
     .acct_type_box:hover {
-        background-color: var(--pin-num-match-needed);
+        background-color: var(--primary-color);
         color: white;
     }
 
@@ -190,5 +192,28 @@ body {
     }
 
     /* Box Deets font */
+
+    /* Submit */
+    .submit {
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--button-two);
+        color: white;
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
+        width: 100%;
+        /* border-radius: 5px; */
+    }
+
+    /* Submit Disabled */
+    .submit:disabled {
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--acct-type-button-background);
+        color: var(--text-color);
+        opacity: .6;
+        cursor: not-allowed;
+    }
 
 }
