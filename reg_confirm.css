@@ -1,0 +1,74 @@
+/* CSS Variables */
+
+/* The ROOT (for Day Mode) */
+:root {
+    --base-color: white;
+    --text-color: black;
+    --button-color: #181717;
+    --button-words: white;
+    --primary-color: #3a435d;
+    --theme-switch-backgrd: #9fa4b3;
+    --button-two: #131212;
+    --pin-num-match-needed: #393636;
+    --pins-match: #0AA51C;
+    --pins-no-match: #DE391C;
+    --match-background: #ffffff;
+    --acct-type-button-background: rgb(57, 54, 54);  
+    --acct-type-button-pressed: rgb(255, 255, 255);  
+}
+
+/* Darkmode (for Nite Mode) */
+.darkmode {
+    --base-color: #1E1E1E;
+    --text-color: white;
+    --button-color: #181717;
+    /* --button-color: #393636; */
+    --button-words: white;
+    --primary-color: #3a435d; 
+    --theme-switch-backgrd: #15171d;
+    --button-two: #131212;
+    --pin-num-match-needed: #393636;
+    --pins-match: #0AA51C;
+    --pins-no-match: #DE391C;
+    --match-background: #1E1E1E;
+    --acct-type-button-background: #181717;
+    --acct-type-button-pressed: rgb(255, 255, 255);
+}
+
+/* ********** */
+/* ********** */
+/* Whole Page */
+/* ********** */
+/* ********** */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: var(--base-color);
+        color: var(--text-color);
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 800px) {
+    body {
+        background-color: var(--base-color);
+        color: var(--text-color);
+    }
+}

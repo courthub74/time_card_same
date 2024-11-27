@@ -6,18 +6,6 @@
 
 // Query the account type buttons each
 
-// Helper function
-// let domReady = (cb) => {
-//     document.readyState === 'interactive' || document.readyState === 'complete'
-//       ? cb()
-//       : document.addEventListener('DOMContentLoaded', cb);
-//   };
-  
-//   domReady(() => {
-//     // Display body when DOM is loaded
-//     document.body.style.visibility = 'visible';
-//   });
-
 console.log("Account Type page lives");
 
 // Employer Box
@@ -62,3 +50,12 @@ employee_box.addEventListener('click', (e) => {
 });
 
 // Auth each selection properly to the db
+// Redirect to the Registered page
+
+// Add event listener to the submit button
+submit_acct_type.addEventListener('click', (e) => {
+    // So Submit event doesn't refresh the page
+    e.preventDefault();
+    // Take to registration confirmation page
+    window.location.href = './reg_confirm.html';
+});

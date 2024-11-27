@@ -171,7 +171,6 @@ body {
     }
 
     /* Each Box */
-
     .acct_type_box {
         display: flex;
         justify-content: center;
@@ -185,9 +184,16 @@ body {
         cursor: pointer;
     }
 
+    /* Box Hovered */
     .acct_type_box:hover {
         background-color: var(--primary-color);
         color: white;
+    }
+
+     /* Box pressed */
+     .acct_type_box.clicked {
+        background-color: var(--acct-type-button-pressed);
+        color: black;
     }
 
     /* Box Header font */
@@ -352,6 +358,7 @@ body {
         cursor: pointer;
     }
 
+    /* Box Hovered */
     .acct_type_box:hover {
         background-color: var(--primary-color);
         color: white;
