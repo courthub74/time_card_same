@@ -7,39 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./create_acct.css">
-
-    <!-- Firebase Import -->
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
     
-    <!-- FIREBASE JS -->
-     <!-- <script src="./firebase.js"></script> -->
-     <script type="module">
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyClebQ_EbOEFkP64ljsyhbhGI6sNwtsvYE",  //Encrypt this eventually
-            authDomain: "time-card-db-643c7.firebaseapp.com",
-            projectId: "time-card-db-643c7",
-            storageBucket: "time-card-db-643c7.firebasestorage.app",
-            messagingSenderId: "1084464719976",
-            appId: "1:1084464719976:web:e925dbda8c69d14bc033dd"
-        };
-
-        // Initialize Firebase
-        // const app = initializeApp(firebaseConfig);
-        firebase.initializeApp(firebaseConfig);
-
-
-        // Firebase Auth
-        const auth = firebase.auth();
-
-        // Firebase Firestore
-        const db = firebase.firestore();
-
-        // update Firebase settings
-        db.settings({timestampsInSnapshots: true});
-    </script>
 </head>
 <body>
 
@@ -135,10 +103,13 @@
     
 </body>
 
+
 <!-- DARKMODE -->
 <script src="./darkmode.js"></script>
 <!-- PIN CODE JS -->
 <script src="./create_acct_pin.js"></script>
 <!-- REGISTRATION -->
  <script src="./registration.js"></script>
+<!-- INDEX -->
+ <script src="./index.js"></script>
 </html>

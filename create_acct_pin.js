@@ -150,8 +150,8 @@ inputs_two.forEach((input_2, key_2) => {
                 });
             }
         }
-    })
-})
+    });
+});
 
 
 // Call this function in the Clear button

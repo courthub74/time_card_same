@@ -14,7 +14,10 @@
     --pins-no-match: #DE391C;
     --match-background: #ffffff;
     --acct-type-button-background: rgb(57, 54, 54);  
-    --acct-type-button-pressed: rgb(255, 255, 255);  
+    --acct-type-button-pressed: rgb(255, 255, 255); 
+    
+    /* Account Type */
+    --acct-type-pin-background: #706C6C;
 }
 
 /* Darkmode (for Nite Mode) */
@@ -33,6 +36,9 @@
     --match-background: #1E1E1E;
     --acct-type-button-background: #181717;
     --acct-type-button-pressed: rgb(255, 255, 255);
+
+    /* Account Type */
+    --acct-type-pin-background: #706C6C;
 }
 
 /* ********** */
@@ -56,19 +62,178 @@ body {
     flex-direction: column;
 }
 
+/* ********** */
+/* ********** */
+/* Whole Page */
+/* ********** */
+/* ********** */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
-    body {
-        background-color: var(--base-color);
+    /* Nav */
+    #main_nav {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    #theme_switch {
+        margin: 0 2em 0 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--theme-switch-backgrd);
+        /* Sets the Theme Switch button to top right corner */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    /* NOW set the order of the SVG */
+    #theme_switch svg {
+        fill: var(--primary-color);
+    }
+
+    /* Hide the SVG last child(day mode) */
+    #theme_switch svg:last-child {
+        display: none;
+    }
+
+    /* Invert this for (nite mode) */
+    .darkmode #theme_switch svg:first-child {
+        display: none;
+    }
+
+    /* Make Last child visible in (nitemode) */
+    .darkmode #theme_switch svg:last-child {
+        display: block;
+    }
+
+    /* Main Page */
+    .container {
+        font-family: Poppins;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header Div */
+    .header_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header */
+    .header {
         color: var(--text-color);
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+     /* App State */
+     .state {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        display: flex;
+        justify-content: center;
+        padding: .5em 3em;
+        font-size: 1.2rem;
+        /* To fit the two words in  */
+        width: 60%;
+    }
+
+    /* Announcement */
+    .annoucement {
+        margin-top: 3em;
+        font-size: 1.2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Form */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+        width: 100%;
+        margin-top: 2em;
+        /* background-color: blue; */
+    }
+
+    /* The Confirm Squares */
+    .confirm_square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: .5em;
+    }
+
+    /* Label */
+    label {
+        font-size: 1.1rem;
+    }
+
+    /* Name */
+    .acct_name {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        display: flex;
+        justify-content: center;
+        padding: .5em 2.5em;
+        font-size: 1.2rem;
+        /* To fit the two words in  */
+        width: 60%;
+        font-weight: bold;
+    }
+
+    /* Account Type */
+    .acct_type {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--acct-type-pin-background);
+        color: var(--base-color);
+        width: 85%;
+        padding: .5em;
     }
 }
 
 /* MOBILE */
 @media screen and (max-width: 800px) {
     body {
-        background-color: var(--base-color);
+        background-color: #3a435d;
         color: var(--text-color);
     }
 }

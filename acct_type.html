@@ -13,38 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <!-- Firebase Import -->
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-    
-    <!-- FIREBASE JS -->
-     <!-- <script src="./firebase.js"></script> -->
-     <script type="module">
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyClebQ_EbOEFkP64ljsyhbhGI6sNwtsvYE",  //Encrypt this eventually
-            authDomain: "time-card-db-643c7.firebaseapp.com",
-            projectId: "time-card-db-643c7",
-            storageBucket: "time-card-db-643c7.firebasestorage.app",
-            messagingSenderId: "1084464719976",
-            appId: "1:1084464719976:web:e925dbda8c69d14bc033dd"
-        };
-
-        // Initialize Firebase
-        // const app = initializeApp(firebaseConfig);
-        firebase.initializeApp(firebaseConfig);
-
-
-        // Firebase Auth
-        const auth = firebase.auth();
-
-        // Firebase Firestore
-        const db = firebase.firestore();
-
-        // update Firebase settings
-        db.settings({timestampsInSnapshots: true});
-    </script>
 </head>
 <body>
 

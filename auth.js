@@ -53,18 +53,3 @@ loginForm.addEventListener('submit', (e) => {
 
 // NOW TAKE THIS DATA AND MATCH IT WITH THE REGISTERED IN FIREBASE
 
-
-
-// ALGO FOR RETRIEVING A PIN AND NAME
-/**
- * // Retrieve PIN number from Firebase Realtime Database
-    firebase.database().ref('users/' + userId + '/pin').once('value', (data) => {
-    const storedPin = data.val();
-    // Verify PIN number against provided PIN
-    if (storedPin === providedPin) {
-        // Login successful
-    } else {
-        // Invalid PIN
-    }
-});
- */

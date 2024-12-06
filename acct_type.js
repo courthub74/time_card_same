@@ -56,6 +56,26 @@ employee_box.addEventListener('click', (e) => {
 submit_acct_type.addEventListener('click', (e) => {
     // So Submit event doesn't refresh the page
     e.preventDefault();
+    // Print out the value of the button selected to the console
+
+    // Psuedo Code
+    // Determine button selected
+    // Print out the value of that selected button
+    if (employer_box.classList.contains == 'clicked') {
+        // Do the things
+
+        // Print the console
+        console.log(employer_box.value);
+
+
+    } else if (employee_box.classList.contains == 'clicked') {
+        // Do the things
+
+        // Print the console
+        console.log(employee_box.value);
+    }
+
+    console.log("The account type button is selected");
     // Take to registration confirmation page
     window.location.href = './reg_confirm.html';
 });
