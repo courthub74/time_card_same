@@ -50,13 +50,16 @@ create_acct_form.addEventListener('submit', (e) => {
 
     // NOW map through the first pins row
         // as the second pin field is just there to confirm and activate submit button
-    pin_set.forEach(() => {
-        // READING THE PIN INPUT VALUES
-        // Ok NOW iterate through them (use MAP)
-        const pin_set_value = [...pin_set].map((each_pin_num) => each_pin_num.value).join("");
-        // Test print
-        console.log(`The Pin Entered: ${pin_set_value}`);
-    });
+    // pin_set.forEach(() => {
+    //     // READING THE PIN INPUT VALUES
+    //     // Ok NOW iterate through them (use MAP)
+    //     const pin_set_value = [...pin_set].map((each_pin_num) => each_pin_num.value).join("");
+    //     // Test print
+    //     console.log(`The Pin Entered: ${pin_set_value}`);
+    // });
+
+    // pin set value to encode
+    const pin_set_value = [...pin_set].map((each_pin_num) => each_pin_num.value).join("");
     
     // THEN reset the page
     create_acct_form.reset();
@@ -71,8 +74,17 @@ create_acct_form.addEventListener('submit', (e) => {
 
     // for NO MATCH (don't really need)
     // no_match_confirm.classList.remove('entered');
+
+    // NOW time to Encode parameters to send to registration page
+    const encodedFirst = encodeURIComponent(first);
+    const encodedLast = encodeURIComponent(last);
+    const encodedPin = encodeURIComponent(pin_set_value);
+
+    // Redirect with URL parameters
+    // take user to confirmation page 
+    window.location.href = `confirmation.html?first=${encodedFirst}&last=${encodedLast}&pin=${encodedPin}`
 });
 
-// take user to confirmation page 
+
 
 

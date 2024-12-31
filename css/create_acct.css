@@ -1,0 +1,659 @@
+/* CSS Variables */
+
+/* The ROOT (for Day Mode) */
+:root {
+    --base-color: white;
+    --text-color: black;
+    --button-color: #181717;
+    --button-words: white;
+    --primary-color: #3a435d;
+    --theme-switch-backgrd: #9fa4b3;
+    --button-two: #131212;
+    --pin-num-match-needed: #393636;
+    --pins-match: #0AA51C;
+    --pins-no-match: #DE391C;
+    --match-background: #ffffff;
+}
+
+/* Darkmode (for Nite Mode) */
+.darkmode {
+    --base-color: #1E1E1E;
+    --text-color: white;
+    --button-color: #181717;
+    /* --button-color: #393636; */
+    --button-words: white;
+    --primary-color: #3a435d; 
+    --theme-switch-backgrd: #15171d;
+    --button-two: #131212;
+    --pin-num-match-needed: #393636;
+    --pins-match: #0AA51C;
+    --pins-no-match: #DE391C;
+    --match-background: #1E1E1E;
+}
+
+/* ********** */
+/* ********** */
+/* Whole Page */
+/* ********** */
+/* ********** */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+
+    /* Nav */
+    #main_nav {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    #theme_switch {
+        margin: 0 2em 0 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--theme-switch-backgrd);
+        /* Sets the Theme Switch button to top right corner */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    /* NOW set the order of the SVG */
+    #theme_switch svg {
+        fill: var(--primary-color);
+    }
+
+    /* Hide the SVG last child(day mode) */
+    #theme_switch svg:last-child {
+        display: none;
+    }
+
+    /* Invert this for (nite mode) */
+    .darkmode #theme_switch svg:first-child {
+        display: none;
+    }
+
+    /* Make Last child visible in (nitemode) */
+    .darkmode #theme_switch svg:last-child {
+        display: block;
+    }
+
+    /* Main Page */
+    .container {
+        font-family: Poppins;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header Div */
+    .header_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header */
+    .header {
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* App State */
+    .state {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        display: flex;
+        justify-content: center;
+        padding: .5em 3em;
+        font-size: 1.2rem;
+        /* To fit the two words in  */
+        width: 60%;
+    }
+
+    /* Name Inputs */
+    .name_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        width: 30%;
+        margin-top: 1em;
+    }
+
+    /* Form */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        width: 30%;
+        margin-top: 2em;
+        /* background-color: blue; */
+    }
+
+    /* The Labels */
+    label {
+        font-size: 1rem;
+    }
+
+    /* Name Inputs */
+    .name_inputs {
+        /* background-color: #0AA51C; */
+        width: 100%;
+    }
+
+    /* Input Divs */
+    .input_div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Name Inputs */
+    .name_in {
+        position: relative;
+        display: inline-block;
+        border: 1px solid var(--text-color);
+        background-color: var(--base-color);
+        color: var(--text-color);
+        padding: 1em;
+        /* width: 100%; */
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Pin # */
+    .name_and_pin {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* All 4 Pin fields */
+    .pin_field {
+        /* display: grid;
+        grid-template-columns: repeat(4, 1fr); 4 columns, equal width */
+        display: flex;
+        /* gap: 1vw; */
+        gap: .3vw;
+        width: 100%;
+    }
+
+    /* Each Pin field */
+
+    /* First Row */
+    .pin_put {
+        background-color: var(--base-color);
+        /* background-color: blue; */
+        border: var(--text-color) 1px solid;
+        padding: 1em 1em;
+        position: relative;
+        /* height: 1.6em; */
+        width: 100%;
+        color: var(--text-color);
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Second Row */
+    .pin_put_2 {
+        background-color: var(--base-color);
+        /* background-color: blue; */
+        border: var(--text-color) 1px solid;
+        padding: 1em 1em;
+        position: relative;
+        height: 1.6em;
+        width: 100%;
+        color: var(--text-color);
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Remove focus on Input */
+    input:focus {
+        outline: none;
+    }
+
+     /* Reset the Form Button */
+     .reset_button {
+        margin: .5em 0 0 0;
+        background-color: var(--primary-color);
+        background-color: var(--base-color);
+        border: 1px solid var(--text-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color);
+        font-family: Poppins;
+        cursor: pointer;
+    }
+
+    /* PINS */
+
+    /* PINS NOTIFY DIV */
+    .pin_match_confirm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: -1em; */
+        transition: all .4s ease-in;
+        /* padding: 1em; */
+        /* background-color: #0AA51C; */
+        width: 100%;
+    }
+
+    /* Match (first-child)*/
+    .match_ {
+        display: none;
+        /* opacity: 0; */
+    }
+
+    .match_.entered {
+        opacity: 1;
+        position: absolute;
+        display: flex;
+        /* display: inline-block; */
+        justify-content: center;
+        align-items: center;
+        color: var(--pins-match);
+        background-color: var(--match-background);
+        /* padding: .7em 6em; */
+        border-radius: 5px;
+        /* border: 1px solid var(--pins-match); */
+        font-size: .8em;
+        width: 100%;
+    }
+
+    /* No Match (last-child) */
+    .no_match {
+        display: none;
+        /* opacity: 0; */
+    }
+
+    .no_match.entered {
+        opacity: 1;
+        position: relative;
+        /* display: inline-block; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--pins-no-match);
+        /* margin-top: -1em; */
+        background-color: var(--match-background);
+        border-radius: 5px;
+        /* border: 1px solid var(--pins-no-match); */
+        /* padding: .7em 5em; */
+        font-size: .8em;
+        width: 100%;
+    }
+
+    /* Submit */
+    .submit {
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--button-two);
+        color: white;
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
+        width: 100%;
+        /* border-radius: 5px; */
+    }
+
+    /* Submit Disabled */
+    .submit:disabled {
+        background-color: var(--pin-num-match-needed);
+        color: var(--text-color);
+        opacity: .6;
+        cursor: not-allowed;
+    }
+
+    /* Submit Match */
+    /* .submit.match {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
+        width: 100%;
+        border-radius: 5px;
+    } */
+
+    /* Create an Account */
+    .create_acct {
+        text-align: center;
+        color: var(--text-color);
+        font-weight: bold;
+    }
+    
+    a {
+        color: var(--button-words);
+        text-decoration: none;
+    }
+}
+
+/* MOBILE (Portrait) */
+@media screen and (max-width: 800px) {
+    /* Nav */
+    #main_nav {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    #theme_switch {
+        margin: 0 2em 0 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--theme-switch-backgrd);
+        /* Sets the Theme Switch button to top right corner */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    /* NOW set the order of the SVG */
+    #theme_switch svg {
+        fill: var(--primary-color);
+    }
+
+    /* Hide the SVG last child(day mode) */
+    #theme_switch svg:last-child {
+        display: none;
+    }
+
+    /* Invert this for (nite mode) */
+    .darkmode #theme_switch svg:first-child {
+        display: none;
+    }
+
+    /* Make Last child visible in (nitemode) */
+    .darkmode #theme_switch svg:last-child {
+        display: block;
+    }
+
+    /* Main Page */
+    .container {
+        font-family: Poppins;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        /* border: 1px solid white; */
+        gap: 1.5em;
+    }
+
+    /* Header Div */
+    .header_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header */
+    .header {
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* App State */
+    .state {
+        /* background-color: var(--text-color); */
+        background-color: var(--button-two);
+        /* Make text match the base */
+        color: var(--button-words);
+        display: flex;
+        justify-content: center;
+        padding: .5em 2em;
+        font-size: 1rem;
+        width: 70%;
+    }
+
+    /* Name Inputs */
+    .name_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        width: 90%;
+        margin-top: 1em;
+    }
+
+    /* Form */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5em;
+        width: 90%;
+        /* margin-top: 2em; */
+        /* background-color: blue; */
+    }
+
+    /* The Labels */
+    label {
+        font-size: .8rem;
+    }
+
+    /* Input Divs */
+    .input_div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Name Inputs */
+    .name_in {
+        position: relative;
+        display: inline-block;
+        /* Border and Padding HERE */
+        border: 1px solid var(--text-color);
+        background-color: var(--base-color);
+        padding: .7em;
+        color: var(--text-color);
+        text-align: center;
+        /* padding: 0 1em 0 0; */
+        /* width: 100%; */
+    }
+
+    /* Pin # */
+    .name_and_pin {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* All 4 Pin fields */
+    .pin_field {
+        display: flex;
+        gap: 1vw;
+        width: 100%;
+    }
+
+    /* Each Pin field */
+
+    /* First Row */
+    .pin_put {
+        background-color: var(--base-color);
+        border: var(--text-color) 1px solid;
+        width: 100%;
+        position: relative;
+        height: 2.4em;
+        font-size: 1rem;
+        text-align: center;
+        color: var(--text-color);
+    }
+
+    /* Second Row */
+    .pin_put_2 {
+        background-color: var(--base-color);
+        border: var(--text-color) 1px solid;
+        width: 100%;
+        position: relative;
+        height: 2.4em;
+        font-size: 1rem;
+        text-align: center;
+        color: var(--text-color);
+    }
+
+    /* Remove focus on Input */
+    input:focus {
+        outline: none;
+    }
+
+     /* Reset the Form Button */
+     .reset_button {
+        margin: .5em 0 0 0;
+        background-color: var(--primary-color);
+        background-color: var(--base-color);
+        border: 1px solid var(--text-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color);
+        font-family: Poppins;
+        cursor: pointer;
+    }
+
+    /* PINS */
+
+    /* Pin confirm Div (Change the class of the Whole div according to Pins entered) */
+    .pin_match_confirm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pin-num-match-needed);
+    }
+
+    /* Pins Match */
+    /* Tell last child (no match) to go away */
+    .match #pin_match_confirm:last-child {
+        display: none;
+    }
+
+    /* Make first child (match) visible */
+    .match #pin_match_confirm:first-child {
+        display: block;
+    }
+    /* Pins Don't Match */
+    /* Tell first child (match) to go away */
+    .no_match #pin_match_confirm:first-child {
+        display: none;
+    }
+
+    /* Make last child (no match) come to the stage */
+    .no_match #pin_match_confirm:last-child {
+        display: block;
+    }
+
+
+    /* Match */
+    .match_ {
+        display: none;
+    }
+    .match_.entered {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        /* text-align: center; */
+        align-items: center;
+        color: var(--pins-match);
+        background-color: var(--match-background);
+        /* padding: .3em; */
+        border-radius: 5px;
+        /* border: 1px solid var(--pins-match); */
+        font-size: .8em;
+        width: 50%;
+    }
+
+    /* No Match */
+    .no_match {
+        display: none;
+    }
+    .no_match.entered {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--pins-no-match);
+        background-color: var(--match-background);
+        border-radius: 5px;
+        /* border: 1px solid var(--pins-no-match); */
+        /* padding: .4em 2em; */
+        font-size: .8em;
+        width: 100%;
+    }
+
+    /* Submit */
+    .submit {
+        width: 100%;
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--button-two);
+        color: white;
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .8rem;
+        /* border-radius: 5px; */
+    }
+
+    /* Submit Disabled */
+    .submit:disabled {
+        background-color: var(--pin-num-match-needed);
+        color: var(--text-color);
+        opacity: .6;
+        cursor: not-allowed;
+    }
+
+    /* Create an Account */
+    .create_acct {
+        text-align: center;
+        color: var(--text-color);
+        font-size: .8em;
+        font-weight: bold;
+    }
+    
+    a {
+        color: var(--button-words);
+        text-decoration: none;
+    }
+}

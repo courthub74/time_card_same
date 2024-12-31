@@ -2,8 +2,8 @@
 
 // FOR A CLEAR BUTTON TO RESET THE PAGE
 
-// query the whole form
-const form = document.querySelector('form');
+// Query the create account form
+const create_acct_form_submit = document.getElementById('create_acct_form');
 
 // CLEAR BUTTON 
 
@@ -84,6 +84,8 @@ inputs_two.forEach((input_2, key_2) => {
 });
 
 //////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 // COMPARISON MAPS BELOW
 
 // Pin Row 1
@@ -150,10 +152,13 @@ inputs_two.forEach((input_2, key_2) => {
                 });
             }
         }
-    })
-})
+    });
+});
 
 
+// CLEAR BUTTON
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 // Call this function in the Clear button
 const reset = () => {
     form.reset();
