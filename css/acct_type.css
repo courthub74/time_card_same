@@ -148,6 +148,11 @@ body {
         font-size: 1.5rem;
     }
 
+    /* Reg Info so far */
+    .reg_info {
+        display: none;
+    }
+
     /* Form */
     form {
         display: flex;
@@ -188,6 +193,12 @@ body {
     .acct_type_box:hover {
         background-color: var(--primary-color);
         color: white;
+    }
+
+    /* Box Clicked */
+    .acct_type_box.clicked {
+        background-color: white;
+        color: var(--primary-color);
     }
 
     /* Box Header font */

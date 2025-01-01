@@ -18,6 +18,9 @@ const user_first = urlParams.get('first') ?
 const user_last = urlParams.get('last') ? 
     decodeURIComponent(urlParams.get('last')) : 'No Last Name';
 
+// Account Type
+
+
 // Pin Number
 const user_pin = urlParams.get('pin') ?
     decodeURIComponent(urlParams.get('pin')) : 'No Pin Number';
@@ -25,13 +28,14 @@ const user_pin = urlParams.get('pin') ?
 
 // Display received data
 
-// query the div to display data in
-let user_reg_info = document.getElementById('reg_data');
+// // query the div to display data in
+// let user_reg_info = document.getElementById('reg_data');
 
-// NOW place the decoded urlparam variables in the above variable
-user_reg_info.innerHTML = `
-    <p class="users_info">You are registered as:</p>
-    <p>${user_first}</p>
-    <p>${user_last}</p>
-    <p>Pin: ${user_pin}</p>
-`;
+// // NOW place the decoded urlparam variables in the above variable
+// user_reg_info.innerHTML = `
+//     <p class="users_info">You are registered as:</p>
+//     <p>${user_first}</p>
+//     <p>${user_last}</p>
+//     <p></p>
+//     <p>Pin: ${user_pin}</p>
+// `;

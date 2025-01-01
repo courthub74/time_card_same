@@ -6,18 +6,6 @@
 
 // Query the account type buttons each
 
-// Helper function
-// let domReady = (cb) => {
-//     document.readyState === 'interactive' || document.readyState === 'complete'
-//       ? cb()
-//       : document.addEventListener('DOMContentLoaded', cb);
-//   };
-  
-//   domReady(() => {
-//     // Display body when DOM is loaded
-//     document.body.style.visibility = 'visible';
-//   });
-
 console.log("Account Type page lives");
 
 // Employer Box
@@ -28,6 +16,41 @@ const employee_box = document.getElementById('employee_box');
 
 // Query the submit button
 const submit_acct_type = document.getElementById('submit_acct_type');
+
+// Grab the data from create account page [registration.js] to send to confirmation page
+// Get the URL Parameters (it's a search)
+const urlParams = new URLSearchParams(window.location.search);
+
+// First Name 
+    // As a ternery operator that states:
+    // search for the variable 'first' from url parameters
+        // If it's there, then decode it.
+        // If not return no first name
+        const user_first = urlParams.get('first') ?
+        decodeURIComponent(urlParams.get('first')) : 'No First Name';
+        
+        // Last Name
+        const user_last = urlParams.get('last') ? 
+            decodeURIComponent(urlParams.get('last')) : 'No Last Name';
+        
+        // Account Type
+        
+        
+        // Pin Number
+        const user_pin = urlParams.get('pin') ?
+            decodeURIComponent(urlParams.get('pin')) : 'No Pin Number';
+
+// query the div to display data in
+let user_reg_info = document.getElementById('reg_data');
+
+// NOW place the decoded urlparam variables in the above variable
+user_reg_info.innerHTML = `
+    <p class="users_info">You are registered as:</p>
+    <p>${user_first}</p>
+    <p>${user_last}</p>
+    <p></p>
+    <p>Pin: ${user_pin}</p>
+`;
 
 // Let's submit the whole form
 
@@ -61,4 +84,4 @@ employee_box.addEventListener('click', (e) => {
     submit_acct_type.removeAttribute('disabled');
 });
 
-// Auth each selection properly to the db
+

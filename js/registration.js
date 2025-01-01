@@ -92,7 +92,7 @@ create_acct_form.addEventListener('submit', (e) => {
     
     // Redirect with URL parameters
     // take user to confirmation page 
-    window.location.href = `confirmation.html?first=${encodedFirst}&last=${encodedLast}&pin=${encodedPin}`
+    window.location.href = `acct_type.html?first=${encodedFirst}&last=${encodedLast}&pin=${encodedPin}`
 });
 
 
