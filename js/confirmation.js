@@ -31,8 +31,10 @@ let user_reg_info = document.getElementById('reg_data');
 
 // NOW place the decoded urlparam variables in the above variable
 user_reg_info.innerHTML = `
-    <p class="users_info">You are registered as:</p>
-    <p>${user_name}</p>
-    <p>${acct_type}</p>
-    <p>Pin: ${user_pin}</p>
+    <div class="confirmed_data">
+        <p class="users_info">You are registered as:</p>
+        <p>${user_name}</p>
+        <p>${acct_type}</p>
+        <p>Pin: ${user_pin}</p>
+    </div>
 `;

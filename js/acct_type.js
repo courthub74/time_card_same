@@ -103,7 +103,7 @@ submit_acct_type.addEventListener('click', (e) => {
     // Retreive the encoded url items along with the added employee type
 
     // Concatenate the name
-    let userName = user_first.concat(user_last);
+    let userName = user_first.concat(" ", user_last);
 
     // just shortened the variable
     const user = userName;
