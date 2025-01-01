@@ -72,19 +72,13 @@ create_acct_form.addEventListener('submit', (e) => {
     // for MATCH
     match_confirm.classList.remove('entered');
 
+    // take user to confirmation page 
+    window.location.href = './acct_type.html';
+
     // for NO MATCH (don't really need)
     // no_match_confirm.classList.remove('entered');
-
-    // NOW time to Encode parameters to send to registration page
-    const encodedFirst = encodeURIComponent(first);
-    const encodedLast = encodeURIComponent(last);
-    const encodedPin = encodeURIComponent(pin_set_value);
-
-    // Redirect with URL parameters
-    // take user to confirmation page 
-    window.location.href = `confirmation.html?first=${encodedFirst}&last=${encodedLast}&pin=${encodedPin}`
 });
 
-
+// take user to confirmation page 
 
 

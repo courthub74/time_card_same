@@ -13,6 +13,7 @@
     --pins-match: #0AA51C;
     --pins-no-match: #DE391C;
     --match-background: #ffffff;
+    --acct-type-button-background: #393636;
 }
 
 /* Darkmode (for Nite Mode) */
@@ -29,6 +30,7 @@
     --pins-match: #0AA51C;
     --pins-no-match: #DE391C;
     --match-background: #1E1E1E;
+    --acct-type-button-background: #181717;
 }
 
 /* ********** */
@@ -185,7 +187,7 @@ body {
         padding: 1em;
         /* width: 100%; */
         font-size: 16px;
-        cursor: pointer;
+        /* cursor: pointer; */
     }
 
     /* Pin # */
@@ -454,7 +456,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 2em;
-        width: 90%;
+        width: 100%;
         margin-top: 1em;
     }
 

@@ -78,8 +78,11 @@ const reset = () => {
 
 
 // Add event listener to the reset button
-clear_button.addEventListener('click', function () {
+clear_button.addEventListener('click', (e) => {
+  // Prevent page from auto refresh
+  e.preventDefault();
+  // Test print
   console.log("Clear Button Clicked");
   reset();
-})
+});
 

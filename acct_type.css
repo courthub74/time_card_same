@@ -1,0 +1,398 @@
+/* CSS Variables */
+
+/* The ROOT (for Day Mode) */
+:root {
+    --base-color: white;
+    --text-color: black;
+    --button-color: #181717;
+    --button-words: white;
+    --primary-color: #3a435d;
+    --theme-switch-backgrd: #9fa4b3;
+    --button-two: #131212;
+    --pin-num-match-needed: #393636;
+    --pins-match: #0AA51C;
+    --pins-no-match: #DE391C;
+    --match-background: #ffffff;
+    --acct-type-button-background: rgb(57, 54, 54);  
+    --acct-type-button-pressed: rgb(255, 255, 255);  
+}
+
+/* Darkmode (for Nite Mode) */
+.darkmode {
+    --base-color: #1E1E1E;
+    --text-color: white;
+    --button-color: #181717;
+    /* --button-color: #393636; */
+    --button-words: white;
+    --primary-color: #3a435d; 
+    --theme-switch-backgrd: #15171d;
+    --button-two: #131212;
+    --pin-num-match-needed: #393636;
+    --pins-match: #0AA51C;
+    --pins-no-match: #DE391C;
+    --match-background: #1E1E1E;
+    --acct-type-button-background: #181717;
+    --acct-type-button-pressed: rgb(255, 255, 255);
+}
+
+/* ********** */
+/* ********** */
+/* Whole Page */
+/* ********** */
+/* ********** */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+
+     /* Nav */
+     #main_nav {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    #theme_switch {
+        margin: 0 2em 0 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--theme-switch-backgrd);
+        /* Sets the Theme Switch button to top right corner */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    /* NOW set the order of the SVG */
+    #theme_switch svg {
+        fill: var(--primary-color);
+    }
+
+    /* Hide the SVG last child(day mode) */
+    #theme_switch svg:last-child {
+        display: none;
+    }
+
+    /* Invert this for (nite mode) */
+    .darkmode #theme_switch svg:first-child {
+        display: none;
+    }
+
+    /* Make Last child visible in (nitemode) */
+    .darkmode #theme_switch svg:last-child {
+        display: block;
+    }
+
+    /* Main Page */
+    .container {
+        font-family: Poppins;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header Div */
+    .header_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header */
+    .header {
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* App State */
+    .state {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        display: flex;
+        justify-content: center;
+        padding: .5em 3em;
+        font-size: 1.2rem;
+        /* To fit the two words in  */
+        width: 60%;
+    }
+
+    /* Announcement */
+    .announce_header {
+        margin-top: 2em;
+        font-size: 1.5rem;
+    }
+
+    /* Form */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        width: 75%;
+        margin-top: 2em;
+        /* background-color: blue; */
+    }
+
+    /* The Boxes */
+    .acct_type_boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        /* background-color: #3a435d; */
+        width: 100%;
+    }
+
+    /* Each Box */
+
+    .acct_type_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        border: 2px solid black;
+        width: 100%;
+        background-color: var(--acct-type-button-background);
+        color: white;
+        padding: 3em;
+        cursor: pointer;
+    }
+
+    .acct_type_box:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    /* Box Header font */
+    .box_header {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    /* Box Deets font */
+
+    /* Submit */
+    .submit {
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--button-two);
+        color: white;
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
+        width: 100%;
+        /* border-radius: 5px; */
+    }
+
+    /* Submit Disabled */
+    .submit:disabled {
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--acct-type-button-background);
+        color: var(--text-color);
+        opacity: .6;
+        cursor: not-allowed;
+    }
+
+}
+
+/* MOBILE */
+
+/* Portrait */
+@media screen and (max-width: 800px) {
+    /* Nav */
+    #main_nav {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    #theme_switch {
+        margin: 0 2em 0 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--theme-switch-backgrd);
+        /* Sets the Theme Switch button to top right corner */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+     /* NOW set the order of the SVG */
+     #theme_switch svg {
+        fill: var(--primary-color);
+    }
+
+    /* Hide the SVG last child(day mode) */
+    #theme_switch svg:last-child {
+        display: none;
+    }
+
+    /* Invert this for (nite mode) */
+    .darkmode #theme_switch svg:first-child {
+        display: none;
+    }
+
+    /* Make Last child visible in (nitemode) */
+    .darkmode #theme_switch svg:last-child {
+        display: block;
+    }
+
+    /* Main Page */
+    .container {
+        font-family: Poppins;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header Div */
+    .header_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header */
+    .header {
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* App State */
+    .state {
+        background-color: var(--button-two);
+        color: var(--button-words);
+        display: flex;
+        justify-content: center;
+        padding: .5em 2em;
+        font-size: 1rem;
+        /* To fit the two words in  */
+        width: 70%;
+    }
+
+    /* Announcement */
+    .announce_header {
+        margin-top: 2em;
+        font-size: 1.2rem;
+    }
+
+    /* Form */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        width: 75%;
+        margin-top: 2em;
+        /* background-color: blue; */
+    }
+
+    /* The Boxes */
+    .acct_type_boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        /* background-color: #3a435d; */
+        width: 100%;
+    }
+
+    /* Each Box */
+
+    .acct_type_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        border: 2px solid black;
+        width: 100%;
+        background-color: var(--acct-type-button-background);
+        color: white;
+        padding: 3em 1em;
+        cursor: pointer;
+    }
+
+    .acct_type_box:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    /* Box Header font */
+    .box_header {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    /* Box Deets font */
+
+    /* Box pressed */
+    .acct_type_box.clicked {
+        background-color: var(--acct-type-button-pressed);
+        color: black;
+    }
+    
+
+    /* Submit */
+    .submit {
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--button-two);
+        color: white;
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: .9rem;
+        width: 100%;
+        margin-top: 1em;
+        /* border-radius: 5px; */
+    }
+
+    /* Submit Disabled */
+    .submit:disabled {
+        /* background-color: var(--pin-num-match-needed); */
+        background-color: var(--acct-type-button-background);
+        color: var(--text-color);
+        opacity: .6;
+        cursor: not-allowed;
+    }
+}

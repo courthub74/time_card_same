@@ -161,17 +161,20 @@ inputs_two.forEach((input_2, key_2) => {
 ////////////////////////////////////////////////////
 // Call this function in the Clear button
 const reset = () => {
+    // Reset the form
     form.reset();
     // Delete the Match Notify
     match_notify.classList.remove('entered');
     // Delete the No Match
     no_match_notify.classList.remove('entered');
     // Disable the Submit Button
-    submit_acct_info.setAttribute('disabled');
+    submit_acct_info.disabled = true;
 };
 
 // Add event listener to the reset button 
-clear_button.addEventListener('click', () => {
+clear_button.addEventListener('click', (e) => {
+    // Prevent page from auto refresh
+    e.preventDefault();
     console.log("reset button on create acct page");
     // Call Reset form
     reset();
