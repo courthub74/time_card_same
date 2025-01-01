@@ -70,6 +70,7 @@ inputs.forEach((input, key) => {
 });
 
 // Call this function in the Clear button
+  // May need to just reset the pin fields not form
 const reset = () => {
   form.reset();
   submit_button.classList.remove('filled');

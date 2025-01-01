@@ -79,7 +79,10 @@ create_acct_form.addEventListener('submit', (e) => {
     // no_match_confirm.classList.remove('entered');
 
     // Encoded parameters here
+    const encodedFirst = encodeURIComponent(first);
     
+    // Redirect with URL parameters
+    window.location.href = `confirmation.html?first=${encodedFirst}`
 });
 
 // take user to confirmation page 
