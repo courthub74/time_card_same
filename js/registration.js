@@ -77,6 +77,9 @@ create_acct_form.addEventListener('submit', (e) => {
 
     // for NO MATCH (don't really need)
     // no_match_confirm.classList.remove('entered');
+
+    // Encoded parameters here
+    
 });
 
 // take user to confirmation page 
