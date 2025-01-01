@@ -79,10 +79,19 @@ create_acct_form.addEventListener('submit', (e) => {
     // no_match_confirm.classList.remove('entered');
 
     // Encoded parameters here
+
+    // First Name
     const encodedFirst = encodeURIComponent(first);
+
+    // Last Name
+    const encodedLast = encodeURIComponent(last);
+
+    // Pin Number
+    const encodedPin = encodeURIComponent(pin_set_value);
+
     
     // Redirect with URL parameters
-    window.location.href = `confirmation.html?first=${encodedFirst}`
+    window.location.href = `confirmation.html?first=${encodedFirst}&last=${encodedLast}&pin=${encodedPin}`
 });
 
 // take user to confirmation page 
