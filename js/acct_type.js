@@ -8,15 +8,6 @@
 
 console.log("Account Type page lives");
 
-// Employer Box
-const employer_box = document.getElementById('employer_box');
-
-// Employee Box
-const employee_box = document.getElementById('employee_box');
-
-// Query the submit button
-const submit_acct_type = document.getElementById('submit_acct_type');
-
 // Grab the data from create account page [registration.js] to send to confirmation page
 // Get the URL Parameters (it's a search)
 const urlParams = new URLSearchParams(window.location.search);
@@ -52,6 +43,20 @@ user_reg_info.innerHTML = `
     <p>Pin: ${user_pin}</p>
 `;
 
+// Client type buttons
+
+// Keep track of the selected button make up a value and set it to null
+let selectedButton = null;
+
+// Employer Box
+const employer_box = document.getElementById('employer_box');
+
+// Employee Box
+const employee_box = document.getElementById('employee_box');
+
+// Query the submit button
+const submit_acct_type = document.getElementById('submit_acct_type');
+
 // Let's submit the whole form
 
 // Add event listener to buttons to change the css
@@ -60,6 +65,8 @@ user_reg_info.innerHTML = `
 employer_box.addEventListener('click', (e) => {
     // Keep page from refreshing
     e.preventDefault();
+    // set this as selected button
+    selectedButton = employer_box.value;
     // Test print
     console.log("Employer Button");
     // change the css of the button
@@ -74,6 +81,8 @@ employer_box.addEventListener('click', (e) => {
 employee_box.addEventListener('click', (e) => {
     // Keep page from refreshing
     e.preventDefault();
+    // set this as selected button
+    selectedButton = employee_box.value;
     // Test print
     console.log(employee_box.value);
     // change the css of the button
@@ -84,4 +93,55 @@ employee_box.addEventListener('click', (e) => {
     submit_acct_type.removeAttribute('disabled');
 });
 
+// Encode the Button selected
+
+// Submit all info from this page to the confirmation page
+submit_acct_type.addEventListener('click', (e) => {
+    // Prevent reset of page
+    e.preventDefault();
+
+    // Retreive the encoded url items along with the added employee type
+
+    // Concatenate the name
+    let userName = user_first.concat(user_last);
+
+    // just shortened the variable
+    const user = userName;
+
+    // Test print the User Name (concatenated)
+    console.log(user);
+
+    // Test print User Pin
+    console.log(user_pin);
+    const pin = user_pin;
+
+    // NOW do the button
+    // If there is a selected button, store the value in variable
+    if (selectedButton) {
+        console.log('Selected option: ', selectedButton);
+    }
+
+    // Set selected button to a variable
+    const account = selectedButton;
+
+    // Test Print selected button
+    console.log(account);
+
+    // Encode all to send to confirmation page
+
+    // User
+    const encodedUser = encodeURIComponent(user);
+
+    // Pin
+    const encodedPin = encodeURIComponent(pin);
+
+    // Account type
+    const encodedAcct_type = encodeURIComponent(account);
+
+    // AND send to confirmation page
+    window.location.href = `confirmation.html?user=${encodedUser}&pin=${encodedPin}&account=${encodedAcct_type}`;
+
+    // Then send to the database
+
+});
 
