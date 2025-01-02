@@ -6,7 +6,7 @@
 
 \*Landscape Layout
 
-\*Add All Pages
+\*Add interactive Calendar
 
 ### Main Login Page
 
@@ -16,7 +16,11 @@
 
 \*~Registration Pin Code Error Handle~
 
-\*Create Account Login
+\*Create Account Login (with SQLite database)
+
+\*Add Authorization for Employees (see current day to enter hours. Also access to personal calendar)
+
+\*Add Authorization for Employers (see Employees in a list. Click on each employee and see hours as a chart)
 
 ### Registration Page
 

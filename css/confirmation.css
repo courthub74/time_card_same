@@ -1,5 +1,8 @@
 /* CSS Variables */
 
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noticia+Text&family=Playfair+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@500;700;900&family=Satisfy&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
+
+
 /* The ROOT (for Day Mode) */
 :root {
     --base-color: white;
@@ -52,6 +55,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 2em;
+    font-family: Poppins;
 }
 
 /* DESKTOP */
@@ -139,216 +144,73 @@ body {
         width: 60%;
     }
 
-    /* Name Inputs */
-    .name_inputs {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-        width: 30%;
-        margin-top: 1em;
-    }
+  
 
     /* Form */
-    form {
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2em;
         width: 30%;
         margin-top: 2em;
-        /* background-color: blue; */
     }
 
-    /* The Labels */
-    label {
-        font-size: 1rem;
-    }
-
-    /* Name Inputs */
-    .name_inputs {
-        /* background-color: #0AA51C; */
-        width: 100%;
-    }
-
-    /* Input Divs */
-    .input_div {
+    /* Confirmed Data */
+    .confirmed_data {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+        margin-top: 2em;
+        border: 2px solid var(--button-two);
+        background-color: var(--button-two);
+        padding: 5em;
+        color: white;
     }
 
-    /* Name Inputs */
-    .name_in {
-        position: relative;
-        display: inline-block;
-        border: 1px solid var(--text-color);
-        background-color: var(--base-color);
-        color: var(--text-color);
-        padding: 1em;
-        /* width: 100%; */
-        font-size: 16px;
-        /* cursor: pointer; */
+    /* User Info */
+    .users_info {
+        font-size: 1.2rem;
     }
 
-    /* Pin # */
-    .name_and_pin {
-        font-size: 1.5rem;
+    /* User Name */
+    .user_reg {
         font-weight: bold;
-        text-align: center;
     }
 
-    /* All 4 Pin fields */
-    .pin_field {
-        /* display: grid;
-        grid-template-columns: repeat(4, 1fr); 4 columns, equal width */
+    /* Yes or No */
+    .yes_no {
         display: flex;
-        /* gap: 1vw; */
-        gap: .3vw;
-        width: 100%;
-    }
-
-    /* Each Pin field */
-
-    /* First Row */
-    .pin_put {
-        background-color: var(--base-color);
-        /* background-color: blue; */
-        border: var(--text-color) 1px solid;
-        padding: 1em 1em;
-        position: relative;
-        /* height: 1.6em; */
-        width: 100%;
-        color: var(--text-color);
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    /* Second Row */
-    .pin_put_2 {
-        background-color: var(--base-color);
-        /* background-color: blue; */
-        border: var(--text-color) 1px solid;
-        padding: 1em 1em;
-        position: relative;
-        height: 1.6em;
-        width: 100%;
-        color: var(--text-color);
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    /* Remove focus on Input */
-    input:focus {
-        outline: none;
-    }
-
-     /* Reset the Form Button */
-     .reset_button {
-        margin: .5em 0 0 0;
-        background-color: var(--primary-color);
-        background-color: var(--base-color);
-        border: 1px solid var(--text-color);
-        border: none;
-        border-radius: 5px;
-        color: var(--text-color);
-        font-family: Poppins;
-        cursor: pointer;
-    }
-
-    /* PINS */
-
-    /* PINS NOTIFY DIV */
-    .pin_match_confirm {
-        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* margin-top: -1em; */
-        transition: all .4s ease-in;
-        /* padding: 1em; */
-        /* background-color: #0AA51C; */
-        width: 100%;
+        padding: 1em;
     }
 
-    /* Match (first-child)*/
-    .match_ {
-        display: none;
-        /* opacity: 0; */
-    }
-
-    .match_.entered {
-        opacity: 1;
-        position: absolute;
+    /* y n buttons */
+    .buttons_y_n {
         display: flex;
-        /* display: inline-block; */
-        justify-content: center;
-        align-items: center;
-        color: var(--pins-match);
-        background-color: var(--match-background);
-        /* padding: .7em 6em; */
-        border-radius: 5px;
-        /* border: 1px solid var(--pins-match); */
-        font-size: .8em;
-        width: 100%;
+        gap: 1em;
     }
 
-    /* No Match (last-child) */
-    .no_match {
-        display: none;
-        /* opacity: 0; */
-    }
 
-    .no_match.entered {
-        opacity: 1;
-        position: relative;
-        /* display: inline-block; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--pins-no-match);
-        /* margin-top: -1em; */
-        background-color: var(--match-background);
-        border-radius: 5px;
-        /* border: 1px solid var(--pins-no-match); */
-        /* padding: .7em 5em; */
-        font-size: .8em;
-        width: 100%;
-    }
 
     /* Submit */
     .submit {
         /* background-color: var(--pin-num-match-needed); */
-        background-color: var(--button-two);
-        color: white;
+        background-color: var(--button-words);
+        color: var(--acct-type-button-background);
         border: none;
         padding: 1em;
-        font-weight: bold;
-        cursor: pointer;
-        font-size: .9rem;
-        width: 100%;
-        /* border-radius: 5px; */
-    }
-
-    /* Submit Disabled */
-    .submit:disabled {
-        background-color: var(--pin-num-match-needed);
-        color: var(--text-color);
-        opacity: .6;
-        cursor: not-allowed;
-    }
-
-    /* Submit Match */
-    /* .submit.match {
-        background-color: var(--button-two);
-        color: var(--button-words);
-        border: none;
-        padding: 1em;
-        font-weight: bold;
+        /* font-weight: bold; */
         cursor: pointer;
         font-size: .9rem;
         width: 100%;
         border-radius: 5px;
-    } */
+        text-align: center;
+    }
 
     /* Create an Account */
     .create_acct {
@@ -358,8 +220,10 @@ body {
     }
     
     a {
-        color: var(--button-words);
+        color: white;
         text-decoration: none;
+        padding: .5em;
+        /* font-weight: bold; */
     }
 }
 
