@@ -33,7 +33,7 @@ let user_reg_info = document.getElementById('reg_data');
 user_reg_info.innerHTML = `
     <div class="confirmed_data">
         <p class="users_info">You are registered as:</p>
-        <p>${user_name}</p>
+        <p class="user_reg">${user_name}</p>
         <p>${acct_type}</p>
         <p>Pin: ${user_pin}</p>
     </div>
